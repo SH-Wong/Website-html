@@ -6,6 +6,14 @@
     padding-right: 12px;
     font-family: League Spartan, Arial, Helvetica, sans-serif;
     z-index: 2;
+
+    #landing > &{
+        position: absolute; width:calc(100% - 24px);
+    }
+}
+
+@media (max-width: 575px) {
+    #landing > .navbar{width:100%;}
 }
 
 .navbar-brand{
