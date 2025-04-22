@@ -7,13 +7,13 @@
     font-family: League Spartan, Arial, Helvetica, sans-serif;
     z-index: 2;
 
-    #landing > &{
+    #landing-page &{
         position: absolute; width:calc(100% - 24px);
     }
 }
 
 @media (max-width: 575px) {
-    #landing > .navbar{width:100%;}
+    #landing-page > .navbar{width:100%;}
 }
 
 .navbar-brand{
