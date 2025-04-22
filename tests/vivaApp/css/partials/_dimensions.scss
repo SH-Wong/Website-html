@@ -1,0 +1,19 @@
+/*************/
+/*Dimensions */
+/*************/
+// Set up mock iphone dimension, set up break points in further implementation.
+
+body{
+    background-color: $grey7;
+}
+
+#body-wrapper{
+    height:568px;
+    width:320px;
+    display: block;
+    background-color:$grey1;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}

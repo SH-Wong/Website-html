@@ -1,0 +1,272 @@
+/* Additional styles for joint landing page */
+
+/*---------*/
+/* Top Nav */
+
+#marketing-pages #logo, .centered {
+    max-width: 1024px;
+}
+
+/* #logo .logo{
+    background: url(../images/AL-Boxed.svg);
+} */
+
+nav .fa-external-link{
+    font-size: 12px;
+}
+
+/*----------------*/
+/* Cookies notice */
+
+.cookiesNotice {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.cookiesNotice:before {
+    background-color: #B4CF49;
+    width: 140px;
+    height: 140px;
+    content: "";
+    display: block;
+    transform: rotate(45deg);
+    position: absolute;
+    left: -79px;
+    bottom: -79px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cookiesNotice:after {
+    content: "Cookies!";
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    left: -64px;
+    bottom: 24px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    color: white;
+    background-color: #4a555a;
+}
+
+/*--------------*/
+/* Display area */
+
+.centered-block{
+    padding-top:80px;
+}
+
+#displayWrapper {
+    max-height: 900px;
+}
+
+#home-display-text h1{
+    font-size: 40px;
+    margin-top: 6px;
+}
+
+#home-display-text p{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #eaeaea;
+}
+
+#home-display-text a{
+    line-height: 1;
+}
+
+#home-display-text li{
+    margin: 0 0 14px 0;
+}
+
+#home-display-form a:not(:hover) {
+    color: white;
+    text-decoration: underline
+}
+
+#home-display-form form {
+    margin-right: 32px;
+    padding-top:0;
+}
+
+#home-display-form form span {
+    display: block;
+    width: 100%;
+    padding: 0 0 0 48px;
+    box-sizing: border-box;
+}
+
+#home-display-form form > span .fa {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6e891b+50,697f30+50 */
+    background: #6e891b;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #6e891b 50%, #697f30 50%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #6e891b 50%, #697f30 50%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #6e891b 50%, #697f30 50%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#6e891b', endColorstr='#697f30', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    color: #fcfcfc;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    margin-left: -48px;
+    float: left;
+    border-radius: 2px 0 0 2px;
+}
+
+#home-display-form form > span .fa:before {
+    line-height: 48px;
+    font-size: 18px;
+    color: #f6f6f6;
+}
+
+#home-display-form .login_button,
+#home-display-form .register_button {
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+}
+
+#home-display-form input {
+    height: 48px;
+    border-radius: 0 2px 2px 0;
+    font-size: 16px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+#home-display .system_check_link {
+    background: #4A555A;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #4A555A 50%, #404a4f 50%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #4A555A 50%, #404a4f 50%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #4A555A 50%, #404a4f 50%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4A555A', endColorstr='#404a4f', GradientType=0);
+    /* IE6-9 */
+    color: #fcfcfc;
+    font-size: 11px;
+    font-family: verdana;
+    padding: 12px 16px 12px 14px;
+    border-radius: 4px;
+    width:100%;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+#home-display .system_check_link:hover {
+    color: #C95000;
+    background: #FFFFFF;
+}
+
+#home-display .system_check_link:hover i {
+    color: #C95000;
+}
+
+#home-display .system_check_link i {
+    color: #B4CF49;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 440px){
+    #displayWrapper{
+        max-height: 600px !important;
+    }
+}
+
+[class*='col-'] {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.image-wrap,
+.text-wrap {
+    vertical-align: middle !important;
+}
+
+#mkt-maketime img {
+    max-height: 250px;
+    margin-bottom: 16px;
+}
+
+#home-courses.tri-dark li {
+    display: block;
+    float: left;
+    width: 33.33%;
+    height: 68px;
+    margin: 0;
+    text-align: left;
+    background-color: #5c666b;
+    border-top: 1px solid #4a555a;
+    border-left: 1px solid #4a555a;
+    box-sizing: border-box;
+    padding: 4px 8px;
+}
+
+#home-courses.tri-dark * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#home-courses.tri-dark .link-large .fa{
+    color:#fcfcfc;
+}
+
+#home-courses.tri-dark li img {
+    height: 100%;
+    margin-right: 8px;
+}
+
+.mkt-features .display-area{
+    height:400px;
+}
+
+#marketing-pages .menu a{
+    padding:16px 16px;
+}
+
+.mkt-nav-loginForm{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 412px;
+    padding: 8px 0 8px 8px;
+    background-color: #4a555a;
+    border:0;
+    box-shadow: inset 0 0 15px rgba(0,0,0, 0.5);
+}
+
+.mkt-nav-loginForm input{
+    width:140px;
+    margin:0 2px 0 0;
+}
+
+.mkt-nav-loginForm button{
+    min-width:0px;
+    margin:0 2px 0;
+}
+
+/*--------*/
+/* footer */
+
+#footer-bottom{
+    background:white;
+    border-top:1px solid #eaeaea;
+    height: 60px;
+}
+
+#footer-bottom .footer-logo{
+    background: url("../images/pearson_logo_white_bg.svg");
+    width: 132px;
+    height: 40px;
+    background-size: cover;
+    background-color: white;
+}

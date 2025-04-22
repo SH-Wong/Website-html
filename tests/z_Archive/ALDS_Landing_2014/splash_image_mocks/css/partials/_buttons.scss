@@ -1,0 +1,72 @@
+input[type="submit"], button{
+	border-radius:3px;
+	min-width:100px;
+	box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.buttonGreen{
+	font-size:14px;
+	line-height: 14px;
+	height:1.75rem;
+	background-color: #819D3D;
+	color:white;
+	border:none;
+	padding: 0 8px;
+	
+	i{
+		color:$green2;
+	}
+	
+	&:hover i{
+		color:$hover_color;
+	}
+}
+
+.buttonGreenLarge, input[type="submit"].buttonGreenLarge{
+	font-size:1rem;
+	height:2.5rem;
+	background-color: #819D3D;
+	color:white;
+	border:none;
+	padding: 0 16px;
+	
+	i{
+		color:$green2;
+	}
+	
+	&:hover i{
+		color:$hover_color;
+	}
+}
+
+.buttonGreyLarge, input[type="submit"].buttonGreyLarge {
+	font-size:12px;
+	height:2.5rem;
+	border:none;
+	background-color: #2A6CA4;
+	color:white;
+	padding: 0 16px;
+	vertical-align: top;
+	
+	i{
+		color:$blue2;
+	}
+	
+	&:hover i{
+		color:$hover_color;
+	}
+}
+
+input[type="submit"]:hover, button:hover{
+	cursor:pointer;
+	outline:none;
+	background-color: #FFF;
+	background: #FFF;
+	color:#C64E00;
+}
+
+input[type="submit"]:active {
+	outline:none;
+	background-color: #C64E00;
+	color:#F6F6F6;
+}

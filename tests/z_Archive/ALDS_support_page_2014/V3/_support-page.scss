@@ -1,0 +1,210 @@
+//////////////////////////////////////////////////////////////////////////////////
+//
+// Support page styles
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+// -------------------------------------------------------------------------------
+// Display area
+// -------------------------------------------------------------------------------
+
+.mkt-support{
+	
+	#support-display{
+		height:auto;
+		padding-bottom: 56px;
+		
+		.header{
+			margin-bottom: 24px;
+		}
+		
+		img{
+			box-shadow: -1px -1px 5px rgba(0,0,0,0.1);
+		}
+		
+		.btn-prime{
+			font-size: 16px;
+			height: 40px;
+			padding: 3px 16px;
+			margin-top: 8px;
+		}
+	}
+	
+	#requirementsList{
+		background-color: white;
+		padding: 24px 20px;
+		min-height: 318px;
+		box-shadow: $panel_shadow;
+	}
+	
+	#supported-browsers{
+		margin-bottom: 16px;
+	}
+	
+	#support-documentation h4{
+		font-weight: bold;
+	}
+	
+}
+
+//Display area =< 768px:
+@media screen and (max-width: 768px){
+
+	.mkt-support{
+
+		#support-display{
+			padding-bottom: 32px;
+
+			img{
+				display: none;
+			}
+
+			h2{
+				margin-bottom: 12px;
+			}
+
+			ul{
+				box-shadow: $panel_shadow;
+			}
+
+			li{
+				display: block;
+				margin: 0;
+				background-color: white;
+				padding: 12px 0;
+				border-bottom: $border-mid;
+			}
+		}
+
+		#requirementsList{
+			background-color: transparent;
+			padding: 0;
+			min-height: 0;
+			box-shadow: none;
+		}
+
+		#supported-browsers{
+			margin-bottom: 28px;
+		}
+	}
+}
+
+
+
+
+// -------------------------------------------------------------------------------
+// "Need some help" section
+// -------------------------------------------------------------------------------
+#support-documents-list{
+	i{
+		color: $blue3;
+	}
+	
+	
+	.header{
+		margin-bottom: 16px;
+	}
+	
+	#support-help{
+		max-width: 680px;
+		
+		> div, > a{
+			background-color: $grey10;
+			display: inline-block;
+			border-radius: 16px;
+			padding:8px 16px;
+			box-shadow: $panel_shadow;
+			margin:0 4px 16px;
+			box-sizing: border-box;
+		}
+		
+		i{
+			border-left: 1px solid $grey8;
+			padding-left: 6px;
+			margin-left: 4px;
+			font-size: 16px;
+		}
+		
+		a{
+			&:hover, &:hover i{
+				color:$link_hover;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:440px){
+	#support-documents-list{
+		#support-help{
+			> div, > a{
+				width: 100%;
+				margin: 0 0 12px;
+			}
+		}
+	}
+}
+
+
+// -------------------------------------------------------------------------------
+// "Flying start" section
+// -------------------------------------------------------------------------------
+#mkt-support-training{
+	a{
+		font-weight:700;
+	}
+}
+
+
+
+// -------------------------------------------------------------------------------
+// Contact details section
+// -------------------------------------------------------------------------------
+
+#mkt-contactUs{
+	.text-wrap{
+		padding-bottom: 40px;
+		word-break: break-all;
+	}
+	
+	p{
+		font-size: $font_size;
+	}
+	
+	#mkt-contact-out-of-UK{
+		width:25%;
+	}
+}
+
+//Contact details =< 946px:
+@media screen and (max-width: 946px){
+#mkt-contactUs{
+	.text-wrap,
+	#mkt-contact-out-of-UK{
+		width:100%;
+		text-align: center;
+		padding: 32px 0;
+		border-top: $border-mid;
+	}
+	
+	h4{
+		font-size: 18px;
+	}
+	
+	p, a{
+		font-size: 1rem;
+		margin: 4px 0;
+	}
+}
+}
+
+//Contact details =< 468px:
+@media screen and (max-width: 468px){
+#mkt-contactUs{
+	
+	.text-wrap,
+	#mkt-contact-out-of-UK{
+		text-align: left;
+		padding-left: 16px;
+	}
+}
+}

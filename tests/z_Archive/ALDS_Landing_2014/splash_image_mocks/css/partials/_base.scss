@@ -1,0 +1,118 @@
+section{
+	text-align:center;
+	padding:8rem 0;
+}
+
+.centeredContainer{
+	position:relative;
+    max-width: $width_desktop;
+    margin:0 auto;
+}
+
+a, a:link, a:visited{
+	text-decoration:none;
+	color:$link_color;
+}
+
+a:hover{
+	color:$hover_color;
+}
+
+.floatLeft{
+	float:left;
+}
+
+.floatRight{
+	float:right;
+}
+
+.tri_light, .tri_dark{
+	background-position:center;
+	background-size: cover;
+}
+
+.tri_dark{
+	color:$reversetext_color;
+
+	a, a:link, a:visited{
+		color:$green2;
+	}
+
+	a:hover{
+		color:$blue2;
+	}
+}
+
+/* Blurb */
+.blurbContainer {
+	max-width:60rem;
+	margin: 0 auto;
+	border-bottom: solid 1px $border_color;
+	padding: 8rem;
+
+	&:last-child{
+		border-bottom: none;
+	}
+}
+
+.blurbText {
+	width: 43.5%;
+	padding: 0 3%;
+	text-align: left;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.blurbImageContainer {
+	width: 47.5%;
+	padding: 0 1%;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.homeBlurbImage{
+	height: auto;
+	max-height: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+
+a.blurbLink {
+	color:$link_color3;
+	font-size:18px;
+
+	i{
+		color:$link_color;
+	}
+
+	&:hover, &:hover i{
+		color:$hover_color;
+	}
+}
+
+.blurbContainer2 {
+	
+	header{
+		margin-bottom: 3rem;
+		
+		p{
+			font-size: 18px;
+			max-width: 680px;
+			margin:0 auto;
+		}
+	}
+	
+	img{
+		margin-bottom: 3rem;;
+		box-shadow: 0 0 5px rgba(0,0,0, .1);
+		border-radius: 6px;
+		max-width: 100%;
+	}
+	
+	.blurbText {
+		margin-bottom: 4rem;
+	}
+	
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>siuhangwong.com</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f9c061934e.js" crossorigin="anonymous"></script>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/global.css">
+	<link rel="stylesheet" href="../css/nav.css">
+	<!-- Page level styles: -->
+		<style>
+			:root{
+				--project-color-primary:#4a555a;
+				--project-color-secondary:#B4CF49;
+				--project-color-tertiary:#80973D;
+			}
+			
+			.card#Result{
+				background-color: rgb(0, 157, 151, .03);
+				border-color: rgb(0, 157, 151, .5);
+				
+				h3, i{
+					color: var(--project-color-tertiary);
+				}
+			}
+			
+			.ast{color: var(--project-color-tertiary);}
+		</style>
+</head>
+
+<body id="project-page">
+	<!--Load nav bar-->
+	<div id="navbar">
+		<script>
+			$.get("../nav.html", function(data){
+				$("#navbar").replaceWith(data);
+			})
+		</script>
+	</div>
+
+	<div id="project-content-wrapper" class="container-fluid">
+		
+		<section id="project-hero-wrapper" class="row pt-5">
+			<div class="col-md-1"></div> <!--spaceer column -->
+			<div id="project-intro" class="col-lg-7 col-md-10">
+				<div id="breadcrumb">
+					<a href="/index.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angle-left"></i> Back</a>
+					<span style="color:var(--project-color-tertiary);">2015 &gt; 2018</span><span class="divider"> | </span>
+					<a href="https://manufacture2030.com/" target="_blank">ActiveLearn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+				</div>
+				<h1 class="mt-3">ActiveLearn: Design system</h1>
+				<div id="capacity">
+					<label>CAPACITY:</label>
+					<span class="badge rounded-pill">Design system</span>
+					<span class="badge rounded-pill">Visual design</span>
+				</div>
+				<p class="mt-4">ActiveLearn functions by bringing together multiple independently developed systems, with the goal to work as a flexible platform for a large variety of interactive learning material. As such the design system served as the connecting element, with a philosophy to provide a seamless experience, and where appropriate to sit back and allow the learning materials themselves to shine.</p>
+			</div>
+			<div id="project-hero" class="col-md-12">
+				<img class="image" src="../img/project-ALDesignSystem/0_Hero.jpg" alt="Image" aria-hidden>
+			</div>
+		</section>
+
+		<section id="Colours" class="project-stage row justify-content-center">
+			<div class="row col-lg-8 col-md-10">
+				<h2 class="stage-title col-md-2">COLOURS</h2>
+				<div class="stage-content col-md-10">
+					<p>Colours inherited from independently developed modules, re-contextualised for the overarching design system:</p>
+				</div>
+			</div>
+			<div class="row col-lg-8 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALDesignSystem/1_colours.jpg" class="figure-img img-fluid rounded">
+				</figure>
+			</div>
+		</section>
+		
+		<section id="DesignApproach" class="project-stage row justify-content-center">
+			<div class="row col-lg-8 col-md-10">
+				<h2 class="stage-title col-md-2">DESIGN APPROACH</h2>
+				<div class="stage-content col-md-10">
+					<p>A deliberate approach was taken to contrast the design of the user interface, and the course contents. Using a flat, discrete design style for the platform to serve as a muted transparent host; and a more rendered approach for course contents to allow each branded courses to take the user’s focus.</p>
+				</div>
+			</div>
+			<div class="row col-lg-8 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALDesignSystem/2_Approach.png" class="figure-img img-fluid rounded">
+				</figure>
+			</div>
+		</section>
+		
+		<section id="Typography" class="project-stage row justify-content-center">
+			<div class="row col-lg-8 col-md-10">
+				<h2 class="stage-title col-md-2">FONT STYLES</h2>
+				<div class="stage-content col-md-10">
+					<p>Snippets of typographic elements for a clear hierarchy.</p>
+				</div>
+			</div>
+			<div class="row col-lg-8 col-md-10 mt-5">
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/3_h1.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/4_h2.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/5_h3.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/6_h4.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/7_p.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/8_a.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/9_ul.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/10_ol.png" class="figure-img img-fluid rounded">
+				</figure>
+			</div>
+		</section>
+		
+		<section id="Elements" class="project-stage row justify-content-center">
+			<div class="row col-lg-8 col-md-10">
+				<h2 class="stage-title col-md-2">ELEMENTS</h2>
+				<div class="stage-content col-md-10">
+					<p>Snippet of basic component designs for accessible interactive elements.</p>
+				</div>
+			</div>
+			<div class="row col-lg-8 col-md-10 mt-5">
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/11_BtnPrimary.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/12_BtnSecondary.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/13_BtnDanger.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/14_BtnAux.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/15_th.png" class="figure-img img-fluid rounded">
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/16_cellRAGG.png" class="figure-img img-fluid rounded">
+				</figure>
+			</div>
+		</section>
+		
+		<section id="Examples" class="project-stage row justify-content-center">
+			<div class="row col-lg-8 col-md-10">
+				<h2 class="stage-title col-md-2">APPLIED EXAMPLES</h2>
+				<div class="stage-content col-md-10"></div>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALDesignSystem/17_Icons.jpg" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Icons buttons to access branded courses</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALDesignSystem/18_Landing.jpg" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Navigation and resource library</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALDesignSystem/19_Tabs.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Tabbed data tables</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/20_Graphic1.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">ActiveLearn branded graphic (dark)</figcaption>
+				</figure>
+				<figure class="figure col-lg-6">
+					<img src="../img/project-ALDesignSystem/21_Graphic2.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">ActiveLearn branded graphic (light)</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALDesignSystem/22_GroupComponent.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Class management components</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALDesignSystem/23_EbookReader.jpg" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Ebook reader</figcaption>
+				</figure>
+			</div>
+		</section>
+
+	</div><!--Project content wrapper: END-->
+	
+	<!--Load footer-->
+	<div id="footer">
+		<script>
+			$.get("../footer.html", function(data){
+				$("#footer").replaceWith(data);
+			})
+		</script>
+	</div>
+
+</body>
+    
+</html>

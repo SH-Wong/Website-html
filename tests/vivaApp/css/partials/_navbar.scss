@@ -1,0 +1,25 @@
+/*************/
+/*Navbar     */
+/*************/
+// IOS style nav bar if required
+
+nav{
+    text-align: center;
+    height:44px;
+    border-bottom: $border-li;
+    
+    h1{
+        font-size: 17px;
+        margin:0;
+        line-height: 44px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    
+    button{
+        height:44px;
+        background-color: transparent;
+        color:$blue8;
+        border-radius:0;
+    }
+}

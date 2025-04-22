@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to ActiveLearn</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style>
+		body .wrapper .displayArea{
+			background: url(image_research/round1/getty/172486403.jpg) no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+
+    <header class="displayArea">
+		<nav id="navWrap" role="navigation">
+			<script>$('#navWrap').load('nav.html');</script>
+		</nav> <!-- load html from nav.html -->
+
+        <div class="centeredContainer">
+            <div class="displayAreaText">
+                <h1>Boosting engagement</h1>
+                <p>Motivating learning resource for the classroom and independent studies</p>
+            </div>
+            <form id="displayLoginForm">
+				<legend>Log in</legend>
+                <input id="username" type="text" name="username" value="Username or email" >
+                <input type="text" name="password" value="Password">
+                <a href="#">Forgot your password?</a>
+                <button class="buttonGreenLarge">Log In</button>
+				<button class="buttonGreyLarge">Create your ActiveLearn account</button>
+            </form>
+        </div>
+        <div id="displayAreaLearnMore">
+            <div id="learnMoreHitArea"></div>
+			<p>learn more <i class="fa fa-chevron-down"></i></p>
+        </div>
+        
+        <div id="newsroll">
+            <div class="centeredContainer">
+                <p id="newsTitle" class="bold"><i class="fa fa-comment-o fa"></i> Latest from ActiveLearn</p>
+                <a href="#"><p>Online evaluation is now available. Register now. <i class="fa fa-angle-double-right"></i></p></a>
+                <nav>
+                    <i id="newsLeft" class="fa fa-caret-left"></i>
+                    <i id="newsRight" class="fa fa-caret-right"></i>
+                </nav>
+            </div>
+        </div><!-- newsroll -->
+        
+    </header><!-- displayImage -->
+    
+    
+    <main>
+        <div id="homeBlurbs">
+            <section class="blurbContainer">
+                <div class="blurbImageContainer">
+                    <img class="homeBlurbImage fadeIn" src="assets/home/LaptopUpArrow.svg" alt="Laptop image">
+                </div>
+                <div class="blurbText">
+                    <h2>Effective learning for students</h2>
+                    <p>ActiveLearn is a new approach to online learning, revision and practice, focused on improving the learning process.</p>
+                    <a class="blurbLink" href="features.html#featuresQuestionsAndAssignments">Structured activities <i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </section><!--first blurb section -->
+            <section class="blurbContainer">
+                <div class="blurbText">
+                    <h2>Learning at school and<br> from home</h2>
+                    <p>Mock blurb - about how ActiveLearn provides an oppontunity for students to access structured resources and activity both form the classroom and at home as homework or assessments.</p>
+                    <a class="blurbLink" href="features.html#featuresEbooks">Interactive ebooks <i class="fa fa-angle-double-right"></i></a>
+                </div>
+                <div class="blurbImageContainer">
+                    <img class="homeBlurbImage fadeIn" src="assets/home/Assignments.svg" alt="Assignment screenshot">
+                </div>
+            </section><!--second blurb section -->
+            <section class="blurbContainer">
+                <div class="blurbImageContainer">
+                    <img class="homeBlurbImage fadeIn" src="assets/home/laptopAndPhone.svg" alt="Assignment screenshot">
+                </div>
+				<div class="blurbText">
+                    <h2>Study anywhere</h2>
+                    <p>Mock up blurb about how ActiveLearns compatibility with desktop, mobile and tablets enable learners to carry on their studies, wherever they are.</p>
+                </div>
+            </section><!--Third blurb section -->			
+        </div><!-- homeBlurbs -->
+
+        <section id="Courses" class="tri_light">
+            <div class="centeredContainer">
+                <div class="homeCenteredHeading">
+                    <h1>Courses</h1>
+                    <p>Blurb about the numerous collection of well-designed, professional, attractive, engaging courses and associated resources available for ActiveLearn.</p>
+                </div>
+                <img class="courseImages" src="assets/home/courseIcons.png">
+                <a class="greyLinks" href="courses.html">See all of our courses <i class="fa fa-angle-double-right"></i></a>
+            </div>
+        </section><!--Courses-->
+        
+        <section id="resources">
+            <div class="centeredContainer">
+                <div class="homeCenteredHeading">
+                    <h1>Our resources</h1>
+                    <nav>
+                        <ul>
+							<li id="activitesButton">Structured activities</li>
+                            <li id="ebooksButton" class="inactiveButton">Interactive ebooks</li>
+                    	</ul>
+                    </nav>
+                </div>
+                <div id="ebooks" class="resourcesEntry">
+                    <img class="resourcesImages" src="assets/home/ebook.gif">
+                    <div class="resourcesText">
+                        <h2>Interactive ebooks</h2><br>
+                        <p>Blurb all about our amazing ebooks. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    </div>
+                </div>
+                <div id="activities" class="resourcesEntry">
+                    <img class="resourcesImages" src="assets/home/Quad.gif">
+                    <div class="resourcesText">
+                        <h2>Structured activities</h2><br>
+                        <p>Blurb all about our the interactive questions available via the ActiveLearn platform.
+Short description of how they are:</p>
+						<ul>
+							<li>Scaffolded</li>
+							<li>Bundled with Help video and documents</li>
+							<li>Resposive with feedback as you do and complete the question.</li>
+							<li>Automatically graded.</li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </section><!--Resources-->
+		
+		<section id="caseStudies">
+            <div class="centeredContainer">
+				<header>
+					<h1>Case studies</h1>
+					<p>Section name to be tweak and be more relatable. Blurb about how AL is tested and trusted by users.</p>
+				</header>
+				<div class="blurbImageContainer">
+                    <img class="homeBlurbImage" id="caseStudyVideo" src="assets/home/caseStudyImage.jpg"/>
+                </div>
+				<div class="blurbText">
+					<blockquote>“Positive quotes from champion school, e.g. ActiveLearn really helped my students learn and achieve their targets!”</blockquote>
+					<div class="quote-author">
+						<h4>Head of Department</h4>
+						<p>Champion School number 1</p>
+					</div>
+				</div>
+			</div>
+		</section><!-- Case studies end -->
+		
+		<section id="otherProducts" class="tri_light">
+			<div class="centeredContainer">
+				<h1>Looking for tools to create more engaging lessons?</h1>
+				<a href="https://www.activeteachonline.com/" target="_blank">Visit www.activeteachonline.com</a><br>
+				<p>To learn about our front of class teaching platform</p>
+			</div>
+		</section>
+		
+        
+    </main> <!--main-->
+        
+	<footer>
+		<script>$('footer').load('footer.html');</script>
+	</footer> <!-- footer -->
+    
+</div><!-- Wrapper -->
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="js/trianglify-gh-pages/trianglify.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+    
+</body>
+</html>

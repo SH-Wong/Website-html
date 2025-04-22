@@ -1,0 +1,173 @@
+#availableCourses{
+
+	&:after{
+			clear:both;
+			content:" ";
+			display:table;
+		}
+
+	header{
+		margin-bottom:2rem;
+
+		p{
+			max-width: 680px;
+			margin: 0 auto 1rem;
+		}
+	}
+
+	.courseListingsColumn{
+
+		text-align:left;
+		width:50%;
+		float:left;
+		box-sizing: border-box;
+		padding: 0 32px;
+
+		&>div{
+
+			&:after{
+				clear:both;
+				content:" ";
+				display:table;
+			}
+
+		}
+
+		h3{
+			font-family:$fontstack_main;
+			margin:24px 0 8px;
+		}
+
+		button{
+			width: 50%;
+			height: 32px;
+			float: left;
+			background: #5C666A;
+			border: 0;
+			border-right: 1px solid $grey8;
+			border-bottom: 1px solid $grey8;
+			border-radius: 1px;
+			text-align: left;
+			font-size: 14px;
+			font-family: $fontstack_main;
+			color: #FFF;
+			padding: 0 8px;
+			box-shadow:none;
+			transition: background 0.1s;
+			transition: color 0.1s;
+
+			i{
+				display:none;
+				transition: display 0.1s;
+				margin-right:4px;
+			}
+			
+			&:hover{
+				background:white;
+				color:$hover_color;
+			}
+
+			&:hover i{
+				display:inline-block;
+				color:$hover_color;
+			}
+
+			&:focus{
+				outline:none;
+			}
+		}
+
+	}
+}
+
+
+#availableCourses .courseDetailsPanel{
+	position:absolute;
+	z-index:9999;
+	background-color: $grey1;
+	max-width: 636px;
+	padding:24px;
+	box-shadow: 0 0 10px rgba(0,0,0, 0.25);
+	
+	a:link, a:visited{
+			text-decoration:none;
+			color:$link_color;
+
+			&:hover{
+				color:$hover_color;
+			}
+		}
+	
+	header{
+		margin-bottom: 1rem;
+		
+		a:link, a:visited{
+			font-size: 11px;
+			font-family: $fontstack_small;
+		}
+		
+		.modalClose, .modalClose:link, .modalClose:visited{
+			color:$grey7;
+			font-size: 20px;
+			position: absolute;
+			top: 12px;
+			right: 14px;
+			
+			&:hover{
+				color:$hover_color;
+			}
+		}
+	}
+	
+	h2, p{
+		color:$maintext_color;
+	}
+	
+	h2{
+		font-size: 24px;
+	}
+	
+	p, a{
+		font-size: 14px;
+	}
+
+	img{
+		float:left;
+		margin-top:-8px;
+		margin-left: -8px;
+	}
+	
+	.courseDetailsText, .courseDetailsFooter{
+		float: right;
+		width: 78%;
+		
+		strong{
+			font-family: arialMedium;
+		}
+	}
+	
+	.courseDetailsText{
+		border-bottom: 1px solid $border_color;
+		padding-bottom: 24px;
+		margin-bottom: 8px;
+	}
+	
+	
+	
+} //#availableCourses .courseDetailsPanel end
+
+
+
+
+#courseBlurbs{
+	padding:0;
+}
+
+#coursesGetStarted{
+	padding:16rem 0;
+	
+	p, a{
+		font-size: 24px;
+	}
+}
+

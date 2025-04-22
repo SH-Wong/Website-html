@@ -1,0 +1,56 @@
+//Base colors setup
+$grey1:#FBFBFB;     //Typical: panel background
+$grey2:#F6F6F6;     //Typical: Panel header
+$grey3:#EAEAEA;     //Typical: light rules
+$grey4:#e6e6e6;     //Typical: Platform background
+$grey5:#DDD;        //Typical: Buttons outline
+$grey6:#CFCFCF;     //Typical: dark rules
+$grey7:#777E7D;     //Typical: h4
+$grey8:#4A555A;     //Typical: main text. ActiveLearn Brand Grey
+$grey9:#333;        //Typical: h1 / active button text
+$green1:#DDEED1;    //Typical: validation
+$green2:#BFD96C;    //Typical: menu hover
+$green3:#B4CF49;    //ActiveLearn Brand Green
+$green4:#697f30;    //Typical: Green buttons
+$orange3:#C95000;    //Typical: Hover
+$blue1:#F5FAFD;     //Typical: active panel/hover
+$blue2:#8ABBE6;     //Typical: form focus outline
+$blue3:#c8ebfd;     //Typical: Table headers
+$blue4:#0086BD;     //Typical: button icons
+$blue5:#005794;     //Typical: links
+
+
+//assign colour to usage
+$alGrey:$grey8;
+$alGreen:$green3;
+$alGreenLit:$green2;
+$border_color:$grey3;
+$border_color2:$grey6;
+$link_color:$blue5;
+$link_color2:$grey7;
+$link_color3:#909597; //blurb links on white
+$panel_color:$grey1;
+$panelheader_color:$grey2;
+$hover_color:$orange3;
+
+//Typography
+$h1_color:$grey8;
+$h2_color:$grey8;
+$h3_color:$grey8;
+$h4_color:$grey8;
+$maintext_color:$grey8;
+$reversetext_color:$grey1;
+
+
+//Forms
+$formbkg_color:$grey1;
+$formplaceholder_color:$grey6;
+$formhoverborder_color:$blue2;
+$formfocusbkg_color:white;
+$formfocus_color:$grey9;
+
+//Tables
+$thbkg_color:$blue3;
+$th_color:$grey8;
+$tdbkg_color:$grey1;
+$td_color:$grey8;

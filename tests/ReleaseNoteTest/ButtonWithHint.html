@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Animated pulse test</title>
+		<link href="css/font-awesome.css" rel="stylesheet">
+        <link href="https://www.pearsonactivelearn.com/css/SH2014/activelearn.css?v=1.12.5-release63" rel="stylesheet">
+	</head>
+  
+	<body>
+        <main>
+                    <button class="btn-prime">Button with hint</button>
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <style>
+                        .btn-prime{
+                            padding-right: 28px;
+                        }   
+                        
+                        .btn-prime + i{
+                            font-size: 16px;
+                            height: 32px;
+                            width: 24px;
+                            padding-right: 4px;
+                            margin-left: -32px;
+                            vertical-align: middle;
+                            text-align: center;
+                            line-height: 32px;
+                            color: #A7C35F;
+                        }
+                        
+                        .btn-prime:hover + i{
+                            color:#c95000;                            
+                        }
+                        
+                        .btn-prime + i:hover{
+                            color:white;
+                            cursor: pointer;
+                        }
+                    </style>
+        </main>
+	</body>
+    
+	<style>
+		html{
+			font-family: arial;
+			color: #4a555a;}
+		body{
+			  background-color: #e6e6e6;}
+		p, a{
+			font-size: 14px;
+			margin: 0 0 8px 0;
+			line-height: 20px;}
+		a{color:#2a6cA4; text-decoration: none;}
+		a:hover{color:#C95000;}
+		p:last-child{
+			margin-bottom: 0;}
+		h3{
+			margin: 0 0 8px 0;}
+		nav ul{
+			margin:0;
+        	padding:0;}
+        nav ul:after{
+			display: table;
+        	content: "";
+        	clear: both;}
+		nav li{
+			list-style: none; float:left; background-color: #4a555a;color:#fcfcfc;height:48px; padding: 0 12px;line-height: 48px;font-size: 14px; cursor: pointer; margin:0;}
+		nav li:hover{
+			  color:#4a555a; background-color:#CDE471; z-index: 100000;}
+		nav ul li{position: relative;}
+		nav ul li:hover ul{display: block;}
+		nav ul ul{
+			display: none;
+			position:absolute;
+			left:0;
+			padding: 0;
+		}
+		nav ul ul li{
+			width:140px;
+			background-color: #fcfcfc;
+			color: #4a555a;
+		}
+		nav ul ul li:hover{
+			background-color: white; 
+			color: #c95000;}
+		nav ul ul li+li{
+			border-top:1px solid #eaeaea;
+		}
+		
+		@keyframes pulse {
+			from {opacity: 1}
+			50% {opacity: 0.25}
+			to {opacity: 1}
+		}
+		
+		#hint{
+			display: inline;
+			position:relative;
+        	z-index: 100000;}
+		
+		#hint > .fa{
+			color:#fcfcfc;
+			position:absolute;
+			top:0px;
+			left:-1px;
+			font-size: 40px;
+			text-shadow: 0 0 10px rgba(0,0,0, 0.2);
+			animation: pulse 2.75s infinite;
+		}
+		
+		#hint > .fa:hover{
+			color:#ffffff;
+			animation: none;
+			cursor: pointer;
+		}
+		
+		#hint #pop-up{
+			color: #4a555a;
+			position:absolute;
+			width:300px;
+			background-color: #FFFFFF;
+			border-radius: 4px;
+			margin-top: 36px;
+			padding:16px 16px;
+			box-shadow: 0px 2px 15px rgba(0,0,0,0.2);
+		}
+		
+		#pop-up:before{
+			display: table;
+			content:"";
+			background-color: #fcfcfc;
+			width:20px;
+			height:20px;
+			position:absolute;
+			transform: rotate(45deg);
+		}
+		
+		#pop-up-hide-btn:hover{ cursor: pointer; color:#c95000 !important;}
+		
+		.hint-below #pop-up{
+			left:-150px;
+		}
+		
+		.hint-below #pop-up:before{
+			margin-left:-10px;
+			top:-10px;
+			left:50%;
+		}
+		
+		.hide{
+			display: none !important;
+		}
+		
+	</style>
+	
+	<script>
+		//var hint = document.getElementById("hint");
+        var hint = document.getElementsByClassName("hint");
+		var popUp = document.getElementById("pop-up");
+		var help = document.getElementById("help");
+		var hintBtn = document.getElementById("hint-btn");
+		var hintHideBtn = document.getElementById("hint-hide-btn");
+		var popUpHideBtn = document.getElementById("pop-up-hide-btn");
+		
+
+        function showHints(){
+            for(i=0; i<hint.length; i++){
+                hint[i].className="hint hint-below";
+            }
+		}
+		
+        function hideHints(){
+            popUp.className="hide";
+            for(i=0; i<hint.length; i++){
+                hint[i].className="hint hide";
+            }
+		}
+		
+		function showPopUp(){
+			popUp.className="";
+		}
+		
+		function hidePopUp(){
+			popUp.className="hide";
+		}
+        
+        // popUp.className+=" hide";
+		
+		help.onclick = showHints;
+		hintBtn.onclick = showPopUp;
+		hintHideBtn.onclick = hideHints;
+		popUpHideBtn.onclick = hidePopUp;
+        
+	</script>
+</html>

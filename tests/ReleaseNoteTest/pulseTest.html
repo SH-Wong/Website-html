@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Animated pulse test</title>
+		<link href="css/font-awesome.css" rel="stylesheet">
+        <link href="https://www.pearsonactivelearn.com/css/SH2014/activelearn.css?v=1.12.5-release63" rel="stylesheet">
+	</head>
+  
+	<body>
+		<nav style="width:1024px; background-color:#4a555a;">
+			<ul>
+                <li style="width:132px; background:url(./images/full_sprite.png) 13px 13px #4A555a no-repeat;"></li>
+				<li>Library</li>
+                <li>Task</li>
+                <li>Report</li>
+				<li>New feature</li>
+				<div id="hint" class="hint hint-below" style="top:28px; left:-62px;">
+					<i id="hint-btn" class="fa fa-bullseye" aria-hidden="true"></i>
+					<div id="pop-up">
+						<h3>New feature title</h3>
+						<i id="pop-up-hide-btn" class="fa fa-times" aria-hidden="true" style="position:absolute; top:12px; right:12px; color:#cfcfcf; font-size:20px;"></i>
+						<p>Text explaining new features, for example:</p>
+						<p>Scheme of work feature available for A level Mathematics. Automatically generate a SoW based on your course options, and further customise for your own teaching needs.</p>
+						<a id="hint-hide-btn" href="#">Hide all hints</a>
+					</div>
+				</div>
+				<li>Admin</li>
+				<li style="float:right;">Help
+					<ul>
+						<li>Help doc</li>
+						<li id="help">Show all hints</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+        <main>
+            <div class="panel" style="width:960px; margin: 16px 32px; height:400px">
+                <div class="panel-header">
+                    <h3>Your Library</h3>
+                    <button>Existing feature with hint</button>
+                    <div id="hint" class="hint hint-below" style="top:4px; left:-174px;">
+                        <i id="hint-btn" class="fa fa-bullseye" aria-hidden="true"></i>
+                        </div>
+					</div>
+                </div>
+                <div class="panel-body">
+                </div>
+            </div>
+        </main>
+	</body>
+    
+	<style>
+		html{
+			font-family: arial;
+			color: #4a555a;}
+		body{
+			  background-color: #e6e6e6;}
+		p, a{
+			font-size: 14px;
+			margin: 0 0 8px 0;
+			line-height: 20px;}
+		a{color:#2a6cA4; text-decoration: none;}
+		a:hover{color:#C95000;}
+		p:last-child{
+			margin-bottom: 0;}
+		h3{
+			margin: 0 0 8px 0;}
+		nav ul{
+			margin:0;
+        	padding:0;}
+        nav ul:after{
+			display: table;
+        	content: "";
+        	clear: both;}
+		nav li{
+			list-style: none; float:left; background-color: #4a555a;color:#fcfcfc;height:48px; padding: 0 12px;line-height: 48px;font-size: 14px; cursor: pointer; margin:0;}
+		nav li:hover{
+			  color:#4a555a; background-color:#CDE471; z-index: 100000;}
+		nav ul li{position: relative;}
+		nav ul li:hover ul{display: block;}
+		nav ul ul{
+			display: none;
+			position:absolute;
+			left:0;
+			padding: 0;
+		}
+		nav ul ul li{
+			width:140px;
+			background-color: #fcfcfc;
+			color: #4a555a;
+		}
+		nav ul ul li:hover{
+			background-color: white; 
+			color: #c95000;}
+		nav ul ul li+li{
+			border-top:1px solid #eaeaea;
+		}
+		
+		@keyframes pulse {
+			from {opacity: 1}
+			50% {opacity: 0.25}
+			to {opacity: 1}
+		}
+		
+		#hint{
+			display: inline;
+			position:relative;
+        	z-index: 100000;}
+		
+		#hint > .fa{
+			color:#fcfcfc;
+			position:absolute;
+			top:0px;
+			left:-1px;
+			font-size: 40px;
+			text-shadow: 0 0 10px rgba(0,0,0, 0.2);
+			animation: pulse 2.75s infinite;
+		}
+		
+		#hint > .fa:hover{
+			color:#ffffff;
+			animation: none;
+			cursor: pointer;
+		}
+		
+		#hint #pop-up{
+			color: #4a555a;
+			position:absolute;
+			width:300px;
+			background-color: #FFFFFF;
+			border-radius: 4px;
+			margin-top: 36px;
+			padding:16px 16px;
+			box-shadow: 0px 2px 15px rgba(0,0,0,0.2);
+		}
+		
+		#pop-up:before{
+			display: table;
+			content:"";
+			background-color: #fcfcfc;
+			width:20px;
+			height:20px;
+			position:absolute;
+			transform: rotate(45deg);
+		}
+		
+		#pop-up-hide-btn:hover{ cursor: pointer; color:#c95000 !important;}
+		
+		.hint-below #pop-up{
+			left:-150px;
+		}
+		
+		.hint-below #pop-up:before{
+			margin-left:-10px;
+			top:-10px;
+			left:50%;
+		}
+		
+		.hide{
+			display: none !important;
+		}
+		
+	</style>
+	
+	<script>
+		//var hint = document.getElementById("hint");
+        var hint = document.getElementsByClassName("hint");
+		var popUp = document.getElementById("pop-up");
+		var help = document.getElementById("help");
+		var hintBtn = document.getElementById("hint-btn");
+		var hintHideBtn = document.getElementById("hint-hide-btn");
+		var popUpHideBtn = document.getElementById("pop-up-hide-btn");
+		
+
+        function showHints(){
+            for(i=0; i<hint.length; i++){
+                hint[i].className="hint hint-below";
+            }
+		}
+		
+        function hideHints(){
+            popUp.className="hide";
+            for(i=0; i<hint.length; i++){
+                hint[i].className="hint hide";
+            }
+		}
+		
+		function showPopUp(){
+			popUp.className="";
+		}
+		
+		function hidePopUp(){
+			popUp.className="hide";
+		}
+        
+        // popUp.className+=" hide";
+		
+		help.onclick = showHints;
+		hintBtn.onclick = showPopUp;
+		hintHideBtn.onclick = hideHints;
+		popUpHideBtn.onclick = hidePopUp;
+        
+	</script>
+</html>

@@ -1,0 +1,21 @@
+//vendor
+@import "vendor/reset";
+
+//modules
+@import "modules/fonts";
+@import "modules/colors";
+@import "modules/variables";
+
+
+// Partials
+@import "partials/base";
+@import "partials/typography";
+@import "partials/grids";
+@import "partials/forms";
+@import "partials/buttons";
+@import "partials/nav";
+@import "partials/footer";
+@import "partials/home";
+@import "partials/support";
+@import "partials/courses";
+@import "partials/features";

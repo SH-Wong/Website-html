@@ -1,0 +1,58 @@
+html{
+    font-family: $fontstack_main, 
+}
+
+h1 {
+	font-family: 'arialLight', $fontstack_main;
+	font-size:2.5rem;
+	font-weight: bold;
+	line-height: 3rem;
+	color:$h1_color;
+	text-shadow:0.125rem 0.125rem 0rem rgba(0,0,0,0.10);
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-family: 'arialLight', $fontstack_main;
+	font-size:28px;
+	line-height: 36px;  
+	color:$h2_color;
+	margin-bottom: 16px;
+}
+
+h3{
+	font-size: 20px;
+	font-family: arialMedium;
+	font-weight: normal;
+	line-height:28px;
+	color:$h3_color
+}
+
+h4{
+	font-size: 14px;
+	font-weight:bold;
+	line-height: 20px;
+	color:$h4_color;
+}
+
+p{
+	font-size: 16px;
+	color:$maintext_color;
+	margin-bottom: 16px;
+	line-height: 1.5;
+}
+
+ol, ul{
+	text-align: left;
+	font-size: 16px;
+	line-height:24px;
+	color:$maintext_color;
+	list-style:disc;
+	padding: 0 0 0 16px;
+}
+
+.tri_dark{
+	h1, h2, h3, h4, h5, h6, p, ol, ul{
+		color:$reversetext_color;
+	}
+}

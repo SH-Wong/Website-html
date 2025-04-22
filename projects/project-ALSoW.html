@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>siuhangwong.com</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f9c061934e.js" crossorigin="anonymous"></script>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/global.css">
+	<link rel="stylesheet" href="../css/nav.css">
+	<!-- Page level styles: -->
+		<style>
+			:root{
+				--project-color-primary:#4a555a;
+				--project-color-secondary:#B4CF49;
+				--project-color-tertiary:#80973D;
+			}
+			
+			.card#Result{
+				background-color: rgb(0, 157, 151, .03);
+				border-color: rgb(0, 157, 151, .5);
+				
+				h3, i{
+					color: var(--project-color-tertiary);
+				}
+			}
+			
+			.ast{color: var(--project-color-tertiary);}
+		</style>
+</head>
+
+<body id="project-page">
+	<!--Load nav bar-->
+	<div id="navbar">
+		<script>
+			$.get("../nav.html", function(data){
+				$("#navbar").replaceWith(data);
+			})
+		</script>
+	</div>
+
+	<div id="project-content-wrapper" class="container-fluid">
+		
+		<section id="project-hero-wrapper" class="row pt-5">
+			<div class="col-md-1"></div> <!--spaceer column -->
+			<div id="project-intro" class="col-lg-7 col-md-10">
+				<div id="breadcrumb">
+					<a href="/index.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angle-left"></i> Back</a>
+					<span style="color:var(--project-color-tertiary);">2015 &gt; 2018</span><span class="divider"> | </span>
+					<a href="https://manufacture2030.com/" target="_blank">ActiveLearn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+				</div>
+				<h1 class="mt-3">Interactive Scheme of Work</h1>
+				<div id="capacity">
+					<label>CAPACITY:</label>
+					<span class="badge rounded-pill">Interaction design</span>
+					<span class="badge rounded-pill">User testing</span>
+				</div>
+				<p class="mt-4">Schemes of Work are a long-term plans used by teachers to map out how to deliver  courses can over an academic year. Traditionally created from scratch by teachers, or purchased as static documents as part of a course pack; ActiveLearn intended to help simplify that planning process and make it easier to customise for the need of individual classrooms.</p>
+			</div>
+			<div id="project-hero" class="col-md-12">
+				<img class="image" src="../img/project-ALSoW/0_Hero.png" alt="Image" aria-hidden>
+			</div>
+		</section>
+		
+		<section id="Problem" class="project-stage row justify-content-center">
+			<div class="row col-lg-8 col-md-10">
+				<h2 class="stage-title col-md-2">PROBLEM</h2>
+				<div class="stage-content col-md-10">
+					<p>Traditionally, creating a Scheme of work is a laborious process that requires teachers to thoroughly analyse the latest curriculum, matching them with available resources, and manually balance topics against available teaching hours. Or otherwise purchased as part of a resource pack as static documents that are difficult to customise.
+						<br><br>The interactive scheme of work aims to simplify this process for teachers to create courses that are tailored to their specific classes.</p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="Designs" class="project-stage row justify-content-center">
+			<div class="row col-lg-8 col-md-10">
+				<h2 class="stage-title col-md-2">DESIGNS</h2>
+				<div class="stage-content col-md-10"></div>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALSoW/1_create1.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Scheme of Work creator step 1: Curriculum options selectors.</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALSoW/2_create2.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Step 2: Modules delivery planner. A recommended delivery plan for all curriculum topics is presented, which can be customised by teacher.</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALSoW/3_tracking.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Track course delivery in a completed plan.</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALSoW/4_lessons.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Drill down into specific units/topics for relevant resources and lesson ideas.</figcaption>
+				</figure>
+			</div>
+			<div class="row col-lg-10 col-md-10 mt-5">
+				<figure class="figure">
+					<img src="../img/project-ALSoW/5_resources.png" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption">Link to resources from the examination board and examination practice papers.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+	</div><!--Project content wrapper: END-->
+	
+	<!--Load footer-->
+	<div id="footer">
+		<script>
+			$.get("../footer.html", function(data){
+				$("#footer").replaceWith(data);
+			})
+		</script>
+	</div>
+
+</body>
+    
+</html>

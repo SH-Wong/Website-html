@@ -1,0 +1,20 @@
+input[type="text"], input[type="password"]{
+    border-radius:3px;
+    border:$borderDrk;
+    background-color: $formbkg_color;
+    color:$formplaceholder_color;
+    transition: width 1s;	
+}
+
+input[type="text"]:hover, input[type="password"]:hover{
+    border:solid 1px $formhoverborder_color;
+}
+
+input[type="text"]:focus, input[type="password"]:focus{
+    outline: $formhoverborder_color solid thin;
+    border-radius:3px;
+    border:solid 1px $formhoverborder_color;
+    background-color: $formfocusbkg_color;
+    color:$formfocus_color;
+}
+

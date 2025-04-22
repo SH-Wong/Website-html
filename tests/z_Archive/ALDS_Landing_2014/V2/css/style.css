@@ -1,0 +1,686 @@
+@charset "UTF-8";
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;text-decoration:none;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+
+/* CSS Document */
+html, body{
+	font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+	font-size:100%;
+    height:100%;
+}
+
+.wrapper{
+    height:100%;
+}
+
+
+/* General formatting */
+.floatLeft{
+	float:left;
+}
+
+.floatRight{
+	float:right;
+}
+
+.inline{
+    display:inline-block;
+}
+
+.centeredContainer{
+    text-align: center;
+	max-width:1024px;
+    margin:0 auto;
+    color:#FCFCFC;
+}
+
+.greenTextLight{
+    color:#BFD96C;
+}
+
+a, a:visited{
+    color: #005794;
+    font-size: 0.75rem;
+}
+
+a.greyLinks{
+    color: #777E7D;
+}
+
+a:hover{
+    color: #C64E00;
+}
+
+a:active{
+    color: #F25800;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.displayNone {
+    display:none;
+}
+
+.display {
+    display:inline;
+}
+
+.behind{
+    z-index: -1;
+}
+
+.shadow{
+    box-shadow: 0px 3px 10px #AAA; 
+}
+
+.fadeIn, .fade1, .fade2, .fade3{
+    opacity:0;
+}
+
+
+/* NAV */
+#navWrap{
+    position: absolute;
+    width:100%;
+	background-color:#4A555A;
+	height:48px;
+    font-family: arialMedium;
+    letter-spacing: 0.75px;
+}
+
+.logo {
+	background:url(../assets/home/AL_Logotype_Green.svg) no-repeat;
+    background-position: 1rem .875rem;
+	height:48px;
+	width:160px;
+    margin-left: 0.5rem;
+	float:left;
+}
+
+#topNav li{
+	display:inline;
+	text-decoration:none;
+}
+
+#navIcon{
+    display: none;
+}
+
+#topNav a:link, #topNav a:visited{
+	text-decoration:none;
+	color:#FFFFFF;
+	padding: 18px 1rem;
+	float:left;
+	font-size:0.75rem;
+}
+
+#navLogIn a:link, #navLogIn a:visited{
+    color:#BFD96C;
+}
+
+#topNav a:hover{
+	color:#4A555A;
+	background-color:#BFD96C;
+}
+
+
+
+/* Header: Display area */
+.displayArea{
+    width:100%;
+    height:100%;
+    background: url(../assets/home/displayImg4Alt.jpg) no-repeat;
+    background-size:cover;
+}
+
+.displayAreaText {
+    text-align: center;
+    position:absolute;
+    top:50%;
+    left:6rem;
+    margin-top: -4.5rem;
+    color: white;
+    transition: display 0.5s;
+}
+
+.displayAreaText a:link, .displayAreaText a:visited{
+    color: white;
+}
+
+.displayAreaText a:hover{
+    color: #C64E00;
+}
+
+.displayArea h1{
+    color:#FFF;
+    text-rendering: geometricPrecision;
+    font-family: arialLight, arial, helvetica, san-serif;
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 0.5rem;
+    transition: font-size 1s;
+    text-shadow:none;
+}
+
+.displayArea p{
+    font-size: 1rem;
+    transition: font-size 1s;
+}
+
+#displayLoginForm {
+    position:absolute;
+    top:50%;
+    left:8rem;
+    margin-top: -5.5rem;
+    line-height:0.6875rem;
+    transition: display 1s;
+}
+
+#displayLoginForm input[type=text]{
+    height: 2.25rem;
+    width: 15rem;
+    padding:0 0.5rem;
+    font-size: 0.8125rem;
+    border-radius:3px;
+    border:solid 1px #EAEAEA;
+    background-color: #FBFCFB;
+    color:#CFCFCF;
+    transition: width 1s;
+}
+
+#displayLoginForm input[type=text]:hover{
+    border:solid 1px #8ABBE6;
+}
+
+#displayLoginForm input[type=text]:focus{
+    outline: #8ABBE6 solid thin;
+    border-radius:3px;
+    border:solid 1px #8ABBE6;
+    background-color: #FFF;
+    color:#333333;
+}
+
+input[type=submit], button{
+    border-radius:3px;
+    min-width:100px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.buttonGreenLarge, input[type=submit].buttonGreenLarge{
+    font-size:1rem;
+    height:2.5rem;
+    background-color: #819D3D;
+    color:white;
+    border:none;
+}
+
+.buttonGreyLarge, input[type=submit].buttonGreyLarge {
+    font-size:1rem;
+    height:2.5rem;
+    border:none;
+    background-color: #2A6CA4;
+    color:#FFF;
+}
+
+input[type=submit]:hover, button:hover{
+    outline:none;
+    background-color: #FFF;
+    background: #FFF;
+    color:#C64E00;
+}
+
+input[type=submit]:active {
+    outline:none;
+    background-color: #C64E00;
+    color:#F6F6F6;
+}
+
+.displayArea form a:link, .displayArea form a:visited{
+    color:#FFF;
+    text-shadow: none;
+    line-height: 2rem;
+}
+
+.displayArea form a:hover{
+    color:#C64E00;
+}
+
+@-webkit-keyframes pulse {
+    from { opacity: 0.4; }
+    50% { opacity:0.85; }
+    to { opacity: 0.4; }
+}
+
+#displayAreaLearnMore {
+    position: absolute;
+    bottom:5rem;
+    text-align: center;
+    width:100%;
+}
+
+#learnMoreHitArea {
+    background:url(../assets/home/displayDownArrow.svg) no-repeat;
+    width:3.125rem;
+    height:3.125rem;
+    margin: 0 auto;
+    text-shadow: 0rem 0rem 0.25rem rgba(0,0,0,0.20);
+    -webkit-animation: pulse 3s infinite;
+    opacity:0.5;
+    transition: opacity 1s;
+}
+
+#displayAreaLearnMore p{
+    color:#FFF;
+    font-size: 0.75rem;
+    position:relative;
+    top:1px;
+    margin: 0 auto;
+    width:6rem;;
+    height:3.125rem;
+    line-height: 3.125rem;
+    vertical-align: middle;
+    letter-spacing: 1px;
+    cursor:pointer;
+}
+
+/* Newsroll */
+#newsroll{
+    background:rgba(255,255,255,0.75);
+    height:3.5rem;
+    position: absolute;
+    bottom:0;
+    width:100%;
+}
+
+#newsroll p{
+	display: inline-block;
+    margin:1.2rem 0 0 1rem ;
+    font-size: 0.75rem;
+    float: left;
+    color:#4A555A;
+}
+
+#newsroll p i{
+    font-size: 1rem;
+    color:#777E7D;
+}
+    
+#newsroll nav{
+    float: right;
+    margin-right: 2rem;
+    color:#777E7D;
+}
+
+#newsroll nav i{
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 1.1rem 0 0 0.5rem;
+    height: 1.25rem;
+    width:1.25rem;
+}
+
+#newsroll a i{
+    color:#2A6CA4;
+}
+
+#newsroll a p:hover, #newsroll a p:hover i{
+    color:#C64E00;
+}
+
+#newsroll nav i:hover{
+    color:#C64E00;
+}
+
+#newsroll nav i:active{
+    color:#333;
+}
+
+
+/* Main */
+
+main p {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color:#4A555A;
+}
+
+h1 {
+    font-size:2.5rem;
+    font-family: 'arial', sans-serif;
+    font-weight: bold;
+	line-height: 1.875rem;
+    color:#4A555A;
+    text-shadow:0.125rem 0.125rem 0rem rgba(0,0,0,0.20);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size:1.75rem;
+    font-family: 'arialLight';
+	line-height: 1.875rem;    
+}
+
+
+/* Blurb */
+#homeBlurbs{
+    color:#4A555A;
+}
+
+.blurbContainer{
+    max-width:64rem;
+    height:26rem;
+    margin: 0 auto;
+    border-bottom: solid 1px #EAEAEA;
+}
+
+.homeBlurbText{
+    margin: 8rem 5%;
+    width:40%;
+    vertical-align: middle;
+}
+
+.blurbLink {
+    font-size: 1.25rem;
+}
+
+.blurbImageContainer{
+    margin: 0 5%;
+    max-height: 100%;
+    width:40%;
+    text-align:center;
+    line-height: 26rem;
+}
+
+.homeBlurbImage{
+    position:relative;
+    height:auto;
+    max-height: 100%;
+    max-width: 85%;
+    vertical-align: middle;
+}
+
+#site-AGTeacher{
+    top:-40px;
+    left:-60px;
+}
+
+#site-primaryStudent{
+    bottom:390px;
+}
+
+/* Courses */
+#Courses {
+    background: url(../assets/home/triangles3.png) no-repeat center, url(../assets/home/triangles2.png) no-repeat center;
+    background-size:auto, cover;
+    background-color: #EAEAEA;
+    padding: 4rem 0 2.5rem;
+}
+
+.homeCenteredHeading {
+    max-width:38rem; 
+    margin:0 auto 1rem;
+}
+
+.courseImages {
+    width:100%;
+    height:auto;
+    margin-bottom: 1rem;
+}
+
+
+
+/* Resources */
+#resources {
+    padding: 4rem 0;
+}
+
+#resources h1, #resources nav{
+    font-weight: normal;
+    text-shadow: none;
+    color:#777E7D;
+}
+
+#resources nav li{
+    display:inline-block;
+    margin:0.5rem;
+}
+
+.inactiveButton {
+    color:#CFCFCF;
+    transition: color 0.15s;
+    cursor: pointer;
+}
+
+.inactiveButton:hover {
+    color:#777E7D;
+}
+
+.resourcesImages {
+    width:64%;
+    height:auto;
+    margin:0 2% ;
+}
+
+.resourcesEntry {
+    text-align: left;
+}
+
+.resourcesText{
+    color:#4A555A;
+    width:30%;
+    display: inline-block;
+    vertical-align:top;
+    padding-right: 1%;
+}
+
+
+/* Footer */
+footer{
+	background-color:#F6F6F6;
+    font-size:0.7rem;
+    font-family: verdana, arial, san-serif;
+}
+
+#socialMediaBar{
+    position:relative;
+    top:-0.5rem;
+    max-width:64rem;
+    margin:0 auto;
+    text-align: center;
+    color:#777E7D;
+    font-size: 0.75rem;
+    font-family: arialMedium;
+    line-height: 3rem;
+    padding: 0 1rem;
+}
+
+#socialMediaBar div{
+    max-width:60rem;
+    margin:0 2rem;
+    background:#EAEAEA;
+}
+
+#socialMediaBar::before{
+    position:absolute;
+    left:1rem;
+    top:-11px;
+    content: " ";
+    background: url(../assets/home/footerRibbonLeft.png);
+    height:3.75rem;
+    width:4.125rem;
+}
+
+#socialMediaBar::after{
+    position:absolute;
+    right:1rem;
+    top:-11px;
+    content: " ";
+    background: url(../assets/home/footerRibbonRight.png);
+    height:3.75rem;
+    width:4.125rem;
+}
+
+#socialMediaBar p{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 1rem 0 0 ;
+}
+
+#socialMediaBar .fa-twitter{
+    font-size: 30px;
+    vertical-align: middle;
+    margin: 0 1.5rem;
+}
+
+#socialMediaBar .fa-facebook{
+    font-size: 24px;
+    vertical-align: middle;
+    margin: 0 1.5rem;
+}
+
+#socialMediaBar .fa-google-plus{
+    font-size: 22px;
+    vertical-align: middle;
+    margin: 0 1.75rem;
+}
+
+#socialMediaBar .fa-youtube{
+    font-size: 24px;
+    vertical-align: middle;
+    margin: 0 1rem;
+}
+
+#socialMediaBar a:link, #socialMediaBar a:visited{
+    color:#777E7D;
+}
+
+#socialMediaBar a:hover{
+    color:#C64E00;
+}
+
+#sitemapContainer{
+	max-width:60rem;
+    padding: 0 3rem;
+    margin:0 auto;
+}
+
+#sitemapContainer ul{
+    width:17%;
+    margin: 2rem 2% 0 0;
+	float:left;
+    line-height: 1.5rem;
+}
+
+#sitemapContainer ul p{
+    font-family: arialMedium, arial, helvetica, san-serif;
+    font-size: 16px;
+    color:#4A555A;
+}
+
+footer a:link, footer li a:visited{
+    font-family: verdana, arial, helvetica, san-serif;
+    color:#777E7D;
+    font-size:0.7rem;
+}
+
+#footerContact{
+    float:right;
+    width:37%;
+    padding: 2rem 0 3rem 5%;
+    border-left:1px solid #EAEAEA;
+}
+
+#footerContact h3{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+#footerContact h4{
+    font-family: arialMedium;
+    font-size: 0.8125rem;
+}
+
+#footerContact, #footerContact a:link, #footerContact a:visited, #copyrightLine a:link,  #copyrightLine a:visited{
+    line-height: 1.25rem;
+    color:#4A555A;
+}
+
+#footerContact i{
+    position: relative;
+    font-size: 1rem;
+    color:#777E7D;
+    top:1px;
+}
+
+#copyrightLine {
+    position:relative;
+    bottom:-40px;
+    clear:left;
+    width:50%;
+}
+
+footer li a:hover, #footerContact a:hover, #footerContact a:hover i, #copyrightLine a:hover{
+    color:#C64E00;
+}
+
+#pearsonBanner{
+	clear: both;
+	Width: 100%;
+	height: 3rem;
+	background-color: #4A5459;
+}
+
+#footerLogoContainer{
+	max-width:62rem;
+    padding: 0 1rem;
+	margin: 0 auto;
+}
+
+#bannerStrapline{
+	Width:9rem;
+	height:1rem;
+	background: url(../assets/home/footer_AlwaysLearning.svg) no-repeat;
+	float:left;
+	margin-top: 0.9rem;
+}
+
+#bannerLogo{
+	Width:7.25rem;;
+	height:1.5rem;
+	background: url(../assets/home/footer_Pearson.svg) no-repeat;
+	float:right;
+	margin-top: 0.8rem;
+}
+
+
+@media (min-width: 1280px) {
+    .displayArea h1{
+    color:#FFF;
+    font-size: 3.5rem;
+    }
+
+    .displayArea p{
+    font-size: 1.5rem;
+    }
+    
+    #displayLoginForm input[type=text]{
+    width: 20rem;
+    }
+}
+
+@media (min-width: 1500px) {
+     .displayAreaText {
+    left:11rem;
+    }
+ 
+    #displayLoginForm {
+    left:14rem;
+    }
+}

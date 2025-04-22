@@ -1,0 +1,340 @@
+// -------------------------------------------------------------------------------
+//
+// Support page styles
+//
+// -------------------------------------------------------------------------------
+
+// Display area
+
+.mkt-support{
+	
+	#support-display{
+		height:auto;
+		padding-bottom: 56px;
+		
+		.header{
+			margin-bottom: 24px;
+		}
+		
+		img{
+			box-shadow: -1px -1px 5px rgba(0,0,0,0.1);
+		}
+		
+		.btn-prime{
+			font-size: 16px;
+			height: 40px;
+			padding: 3px 16px;
+			margin-top: 8px;
+		}
+	}
+	
+	#requirementsList{
+		background-color: white;
+		padding: 24px 20px;
+		min-height: 318px;
+		box-shadow: $panel_shadow;
+	}
+	
+	#supported-browsers{
+		margin-bottom: 16px;
+	}
+	
+	#support-documentation h4{
+		font-weight: bold;
+	}
+	
+}
+
+//Display area =< 768px:
+@media screen and (max-width: 768px){
+
+	.mkt-support{
+
+		#support-display{
+			padding-bottom: 32px;
+
+			img{
+				display: none;
+			}
+
+			h2{
+				margin-bottom: 12px;
+			}
+
+			ul{
+				box-shadow: $panel_shadow;
+			}
+
+			li{
+				display: block;
+				margin: 0;
+				background-color: white;
+				padding: 12px 0;
+				border-bottom: $border-mid;
+			}
+		}
+
+		#requirementsList{
+			background-color: transparent;
+			padding: 0;
+			min-height: 0;
+			box-shadow: none;
+		}
+
+		#supported-browsers{
+			margin-bottom: 28px;
+		}
+	}
+}
+
+
+// Support documents section
+#support-documentation{
+	
+	.header{
+		
+		h2{
+			margin-bottom: 8px;
+		}
+		
+		.helptext{
+			font-size: 12px;
+			margin-bottom: 16px;
+		}
+		
+		a{
+			font-size: 18px;
+			
+			&:hover{
+				color: white;
+			}
+		}
+		
+		i:hover{
+			color: white;
+		}
+	}
+	
+	.centered.panel{
+		text-align: left;
+		max-width: 800px;
+		box-shadow:0 0 30px rgba(0,0,0,0.33);
+		
+		h3{
+			font-size: 28px;
+			line-height: 1.25;
+			font-family: arial;
+			font-weight: 500;
+		}
+		
+		a{
+			color: $link_color;
+			
+			&:hover{
+				color: $link_hover;
+			}
+		}
+		
+		i{
+			color: $grey8;
+
+			&:hover{
+				color: $link_hover;
+			}
+		}
+		
+		>div{
+			width:50%;
+			box-sizing: border-box;
+			float:left;
+			margin:0;
+			padding: 36px;
+			
+			h4{
+				margin-bottom: 4px;
+			}
+			
+			li, h4{
+				font-size: 16px;
+				line-height: 1.4;
+				color: $grey9;
+			}
+			
+			li + h4{
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+#support-help-teachers{
+	border-right:$border-dark;
+	h3{color:$green6;}
+}
+
+#support-help-students{
+	border-bottom:$border-dark;
+	h3{color:$blue7;}
+}
+
+#support-help-learners{
+	h3{color:$purple4;}
+}
+
+//support help area =< 768px:
+@media screen and (max-width: 768px){
+#support-documentation{
+	.centered.panel{
+		>div{
+			width: 100%;
+			padding: 16px 32px;
+		
+			h3{
+				font-size: 24px;
+				margin-bottom: 0px;
+
+				&:hover{
+					color:$link_hover !important;
+					cursor: pointer;
+				}
+
+				&.expandable{
+					@include fa-before("\f0da", inherit, $accordian-drop-icon_color);
+					&:before{margin-right: 12px;}
+				}
+
+				&.expanded:before{
+					content:"\f0d7";
+					margin-left: -4px;
+					margin-right: 11px;
+				}
+			}
+
+			ul{
+				margin-top: 24px;
+			}
+
+			h4, li{
+				border-bottom: $border-light;
+				font-size: 18px;
+				padding-bottom: 6px;
+			}
+
+			li{
+				display: block;
+				margin: 8px  0;
+			}
+			
+			li + h4{
+				margin-top: 32px;
+			}
+		}
+	}
+	
+	#support-help-teachers{
+		border-right:0;
+		border-bottom:$border-dark;
+	}
+	
+}	
+}
+
+//support help area =< 468px:
+@media screen and (max-width: 468px){
+#support-documentation{
+	.centered.panel{
+		>div{
+			h3{
+				font-size: 18px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+}
+
+//support help area =< 360px:
+@media screen and (max-width: 360px){
+#support-documentation{
+	.centered.panel{
+		>div{
+			padding: 12px 12px 12px 16px;
+		}
+	}
+}
+}
+
+
+
+
+//Contact details section
+#mkt-contactUs{
+	.text-wrap{
+		padding-bottom: 40px;
+		word-break: break-all;
+	}
+	
+	.panel{
+		text-align: left;
+		padding: 32px 68px 40px;
+		
+		p:first-child, ul{
+			margin-bottom: 16px;
+		}
+	}
+	
+	p{
+		font-size: $font_size;
+	}
+	
+	#mkt-contact-out-of-UK{
+		width:25%;
+	}
+}
+
+//Contact details =< 946px:
+@media screen and (max-width: 946px){
+#mkt-contactUs{
+	.text-wrap,
+	#mkt-contact-out-of-UK{
+		width:100%;
+		text-align: center;
+		padding: 32px 0;
+		border-top: $border-mid;
+	}
+	
+	h4{
+		font-size: 18px;
+	}
+	
+	p, a{
+		font-size: 1rem;
+		margin: 4px 0;
+	}
+}
+}
+
+//Contact details =< 526px:
+@media screen and (max-width: 526px){
+#mkt-contactUs{
+	.panel{
+		padding: 32px 32px 40px;
+	}
+}
+}
+
+//Contact details =< 468px:
+@media screen and (max-width: 468px){
+#mkt-contactUs{
+	
+	.text-wrap,
+	#mkt-contact-out-of-UK{
+		text-align: left;
+		padding-left: 24px;
+	}
+	
+	.panel{
+		padding: 16px 8px;
+	}
+}
+}

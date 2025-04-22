@@ -1,0 +1,19 @@
+#featuresWrapper{
+	
+	&>header{
+		.centeredContainer{
+			background: url("../assets/home/featuresHeader.png") no-repeat;
+			padding-bottom: 20rem;
+			background-position: center 192px;
+		}
+		
+		h1{
+			color:$grey7;
+			font-size: 48px;
+		}
+	}
+	
+	#featureBlurbs{
+		padding:0;
+	}
+}

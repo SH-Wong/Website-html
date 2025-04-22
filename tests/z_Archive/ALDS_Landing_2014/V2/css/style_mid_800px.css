@@ -1,0 +1,93 @@
+/*Top Nav*/
+
+#topNav ul{
+    position: absolute;
+    left:0;
+    background:#333333;
+    width:100%;
+	box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+    z-index: 9999;
+	display:none;
+}
+    
+    
+#navIcon{
+    display:block;
+    font-size: 1.25rem;
+    color:#FFF;
+    padding:0.875rem;
+}
+
+#topNav li:hover #navIcon {
+    color:#C64E00;
+    background:#FFF;
+	cursor:pointer;
+}
+
+#topNav li{
+	display:block;
+}
+    
+#topNav li:hover ul {
+}
+ 
+#topNav ul a:link, #topNav ul a:visited{
+    display: block;
+    color:#FFF;
+    width:100%;
+    float:none;
+    padding: 18px 0rem;
+    border-bottom:1px solid #222;
+}
+
+#topNav #navLogIn a{
+    color:#819D3D;
+}
+
+#topNav #navRegister a{
+    color:#2A6CA4;
+}
+
+#topNav #navLogIn a:hover, #topNav #navRegister a:hover{
+    color:#4A555A;
+}
+
+#topNav ul a:hover{
+    border-bottom:1px solid #BFD96C;
+}
+
+
+
+/*Display area forms*/
+
+.displayAreaText {
+    left:0;
+    width:100%;
+}
+ 
+#displayLoginForm {
+    left:0;
+    width:100%;
+}
+
+
+/*Newsroll*/
+#newsroll #newsTitle{
+    display:none;
+}
+
+#newsroll p{
+    float:inherit;
+}
+
+#newsLeft{
+    position:absolute;
+    left:1rem;
+    top:0;
+}
+
+#newsRight{
+    position:absolute;
+    right:1rem;
+    top:0;
+}

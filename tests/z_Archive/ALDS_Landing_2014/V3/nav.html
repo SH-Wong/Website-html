@@ -1,0 +1,30 @@
+<div class="centeredContainer">
+	<div class="logo"><a href="index.html"></a></div>
+	<ul id="topNav">
+		<a><i id="navIcon" class="fa fa-bars"></i></a>
+		<li id="navFeatures"><a href="features.html">FEATURES</a></li>
+		<li id="navCourses"><a href="courses.html">COURSES</a></li>
+		<li id="navSupport"><a href="support.html">SUPPORT</a></li>
+	</ul>
+	<ul id="topNavAccounts">
+		<li id="navLogIn"><a href="#">LOG IN</a></li>
+		<li id="navRegister"><a href="#">REGISTER</a></li>
+	</ul>
+	<form id="navLogInForm">
+		<input type="text" placeholder="Username" />
+		<input type="password" placeholder="Password" />
+		<input id="navLogInFormSubmit" type="submit" class="buttonGreen" value="Log In" />
+	</form>
+	<script>
+	//hide/reveal login form
+	$('#navLogInForm').hide();
+	$('#navLogIn').click(function(){
+		$('#navLogIn').hide();
+		$('#navLogInForm').fadeIn();
+	});
+	$('#navLogInFormSubmit').click(function(){
+		$('#navLogInForm').hide();
+		$('#navLogIn').fadeIn();
+	});	
+	</script>
+</div>

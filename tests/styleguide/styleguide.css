@@ -1,0 +1,128 @@
+/***********/
+/* General */
+/***********/
+
+.clearfix{
+    clear: both;
+}
+
+.clearfix:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+main{
+    padding:16px;
+    background-color: #f6f6f6;
+}
+
+main > h1{
+    font-size:48px;
+    color:#4a555a;
+    margin-bottom: 24px;
+}
+
+section > h1{
+    font-size: 36px;
+    font-weight:500;
+    color: #4a555a;
+    margin-bottom: 16px; 
+}
+
+section + section{
+    margin-top: 48px;
+}
+
+.panel{
+    border:1px solid #eaeaea;
+    background: #FFF;
+}
+
+.info-panel{
+    font-size:11px;
+    font-family:verdana;
+}
+
+div + .info-panel{
+    margin-top: 8px;
+}
+
+/**************/
+/* Navigation */
+/**************/
+
+.logo{
+	background: url(../../../images/SH2014/full_sprite.png) no-repeat 14px 14px;
+}
+
+
+/**************/
+/* Typography */
+/**************/
+
+ul > ul,
+ul > ol,
+ol > ol,
+ol > ul {
+    margin-left: 16px;
+}
+
+
+/***********/
+/* Buttons */
+/***********/
+
+div > button:first-child{
+    margin-left: 0;
+}
+
+button, .button, input[type="submit"], input[type="button"]{
+    float:left;
+}
+
+.btn-neg i{
+    color:#E1A5A5;
+    vertical-align:baseline;
+}
+
+.btn-sec .fa{
+    color: #0078B6;
+}
+
+.btn-hover{
+    color:#c95000;
+    background: #FFFFFF;
+    border:1px solid #C95000;
+}
+
+.btn-hover i{
+    color: #C95000;
+}
+
+button[disabled]{
+    box-shadow: none;
+}
+
+
+/**********/
+/* Tables */
+/**********/
+
+th{
+    position: relative;
+}
+
+.sortExp{
+    font-size: 22px;
+    color: #fff;
+    height: 20px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+th.active .sortExp{
+    color:#0078B6;
+}

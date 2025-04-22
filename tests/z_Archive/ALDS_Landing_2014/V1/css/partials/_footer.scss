@@ -1,0 +1,183 @@
+footer{
+	background-color:$panelheader_color;
+    font-size:0.7rem;
+    font-family: verdana, arial, san-serif;
+	
+	p{
+		font-size: 11px;
+	}
+}
+
+#socialMediaBar{
+    position:relative;
+    top:-0.5rem;
+    max-width:64rem;
+    margin:0 auto;
+    text-align: center;
+    color:$grey8;
+    font-size: 0.75rem;
+    font-weight: medium;
+    line-height: 3rem;
+    padding: 0 1rem;
+}
+
+#socialMediaBar div{
+    max-width:60rem;
+    margin:0 2rem;
+    background:#EAEAEA;
+}
+
+#socialMediaBar::before{
+    position:absolute;
+    left:1rem;
+    top:-11px;
+    content: " ";
+    background: url(../assets/home/footerRibbonLeft.png);
+    height:3.75rem;
+    width:4.125rem;
+}
+
+#socialMediaBar::after{
+    position:absolute;
+    right:1rem;
+    top:-11px;
+    content: " ";
+    background: url(../assets/home/footerRibbonRight.png);
+    height:3.75rem;
+    width:4.125rem;
+}
+
+#socialMediaBar p{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 1rem 0 0 ;
+}
+
+#socialMediaBar .fa-twitter{
+    font-size: 30px;
+    vertical-align: middle;
+    margin: 0 1.5rem;
+}
+
+#socialMediaBar .fa-facebook{
+    font-size: 24px;
+    vertical-align: middle;
+    margin: 0 1.5rem;
+}
+
+#socialMediaBar .fa-google-plus{
+    font-size: 22px;
+    vertical-align: middle;
+    margin: 0 1.75rem;
+}
+
+#socialMediaBar .fa-youtube{
+    font-size: 24px;
+    vertical-align: middle;
+    margin: 0 1rem;
+}
+
+#socialMediaBar a:link, #socialMediaBar a:visited{
+    color:$link_color2;
+}
+
+#socialMediaBar a:hover{
+    color:$hover_color;
+}
+
+#sitemapContainer{
+	max-width:60rem;
+    padding: 0 3rem;
+    margin:0 auto;
+}
+
+#sitemapContainer ul{
+	list-style: none;
+	padding:0;
+    width:17%;
+    margin: 2rem 2% 0 0;
+	float:left;
+    line-height: 1.5rem;
+}
+
+#sitemapContainer ul p{
+    font-family: $fontstack_main;
+    font-size: 16px;
+    color:$maintext_color;
+}
+
+footer a:link, footer li a:visited{
+    font-family: $fontstack_small;
+    color:$link_color2;
+    font-size:0.7rem;
+}
+
+#footerContact{
+    float:right;
+    width:37%;
+    padding: 2rem 0 3rem 5%;
+    border-left:$borderLit;
+}
+
+#footerContact h3{
+    font-family: arialMedium;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+#footerContact h4{
+    font-family: arialMedium;
+    font-size: 0.8125rem;
+}
+
+#footerContact, #footerContact a:link, #footerContact a:visited, #copyrightLine a:link,  #copyrightLine a:visited{
+    line-height: 1.25rem;
+    color:$grey8;
+}
+
+#footerContact i{
+    position: relative;
+    font-size: 1rem;
+    color:$grey7;
+    top:1px;
+}
+
+#copyrightLine {
+    position:relative;
+    bottom:-40px;
+    clear:left;
+    width:50%;
+}
+
+footer li a:hover, #footerContact a:hover, #footerContact a:hover i, #copyrightLine a:hover{
+    color:$hover_color;
+}
+
+#pearsonBanner{
+	clear: both;
+	Width: 100%;
+	height: 3rem;
+	background-color: $alGrey;
+}
+
+#footerLogoContainer{
+	max-width:62rem;
+    padding: 0 1rem;
+	margin: 0 auto;
+}
+
+#bannerStrapline{
+	Width:9rem;
+	height:1rem;
+	background: url(../assets/home/footer_AlwaysLearning.svg) no-repeat;
+	float:left;
+	margin-top: 0.9rem;
+}
+
+#bannerLogo{
+	Width:7.25rem;;
+	height:1.5rem;
+	background: url(../assets/home/footer_Pearson.svg) no-repeat;
+	float:right;
+	margin-top: 0.8rem;
+}

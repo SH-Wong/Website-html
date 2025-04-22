@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>ActiveLearn</title>
+        <link rel="stylesheet" href="css/activelearn.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/marketing-pages.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/new-marketing-page.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/font-awesome.css" media="screen" type="text/css">
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/d3.min.js"></script>
+        <script type="text/javascript" src="js/trianglify.min.js"></script>
+        <script type="text/javascript" src="js/mkt2014.js"></script>
+    </head>
+    
+	<body id="marketing-pages" class="landing">
+		<div id="navWrapper"><script>$('#navWrapper').load('mkt-nav.html');</script></div>
+        <div id="displayWrapper" style="height:100%; margin-top:-48px;"><script>$('#displayWrapper').load('templates/mkt-home-display.html');</script></div>
+
+		<div id="main">
+            <div id="blurb1"></div>
+            <div id="blurb2"></div>
+            <div id="blurb3"></div>
+            <div id="blurb4"></div>
+            
+            <script>$('#blurb2').load('templates/mkt-home-blurb-header.html');</script>
+            <script>$('#blurb3').load('templates/mkt-home-blurb-3col.html');</script>
+            <!--<script>$('#blurb3').load('templates/mkt-home-blurb-makeTime.html');</script>-->
+            <!--<script>$('#blurb4').load('templates/mkt-home-products.html');</script>-->
+            <script>$('#blurb4').load('templates/mkt-home-productsV2.html');</script>
+            <script>$('#blurb1').load('templates/mkt-home-quote1.html');</script>
+
+        </div>
+        <div id="footer">
+            <script>$('#footer').load('mkt-footer.html');</script>
+        </div>
+
+        <div id="cookiesNotice" class="cookies">
+            <script>$('#cookiesNotice').load('mkt-cookiesNotice.html');</script>]
+        </div>
+
+	</body>
+</html>

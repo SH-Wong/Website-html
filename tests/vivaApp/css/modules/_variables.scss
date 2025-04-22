@@ -1,0 +1,283 @@
+
+//////////////////////////////////////////////////////////////////////////////////
+//
+// Variables
+//
+// Main setup document for global changes
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+
+// -------------------------------------------------------------------------------
+//
+// Colors
+//
+// Base colors swatches setup.  
+// Change to edit entire scheme. Numbered light to dark
+//
+// -------------------------------------------------------------------------------
+
+
+// GREYS			// TYPICAL USAGE
+
+$grey1:#FCFCFC;     // 
+$grey2:#F6F6F6;     // 
+$grey3:#EAEAEA;     // 
+$grey4:#DDDDDD;		// 
+$grey5:#CFCFCF;     // 
+$grey6:#AAAAAA;     // 
+$grey7:#9B9E9E;     // 
+$grey8:#727272;     // 
+$grey9:#4A555A;     // 
+$grey10:#333333;    // 
+
+
+// BLUES
+
+$blue1:#F5FAFD;     // 
+$blue2:#EAF3F7;		// 
+$blue3:#C8EBFD;     // 
+$blue4:#8ABBE6;     // 
+$blue5:#81D4EB; 	// 
+$blue6:#78C2E0; 	// 
+$blue7:#0086BD;     // 
+$blue8:#2A6CA4;		// 
+$blue9:#1D5A9B;     // 
+
+
+// GREENS
+
+$green1:#ECFFC6;	// 
+$green2:#DDEED1;    // 
+$green3:#BFD96C;    // 
+$green4:#B4CF49;    // 
+$green5:#80973D;	// 
+$green6:#697f30;    // 
+$green7:#2A591F;	// 
+
+
+// ORANGES
+
+$orange1:#F7E9AD;	// 
+$orange2:#F2B542;	// 
+$orange3:#F59518;	// 
+$orange4:#DF5709;	// 
+$orange5:#C95000;   // 
+$orange6:#B34700;	// 
+
+
+// Reds
+
+$red1:#F5DADA;		// 
+$red2:#E1A5A5;		// 
+$red3:#E24C51;		// 
+$red4:#E53333;		// 
+$red5:#BE1A1A;		// 
+$red6:#7F0000;		// 
+
+
+// Gold
+
+$gold1:#B57D00;		//
+$gold2:#A86D10;		//
+
+
+// Purple
+$purple1:#ECE6F4;   //
+$purple2:#D4C8E0;   //
+$purple3:#c4a6cf;   //
+$purple4:#b685c1;   //
+$purple5:#8e64b8;   //
+$purple6:#6F5191;	//
+
+
+// -------------------------------------------------------------------------------
+//
+// General
+//
+// Brand colors and general layout variables
+//
+// -------------------------------------------------------------------------------
+
+
+// brand colors
+
+$brand_color:			$orange2 !default;
+$brand_color2:			$blue9 !default;
+
+
+// Generic borders / outline
+
+$border-li_color:		$grey3 !default;
+$border-li:				1px solid $border-li_color;
+$border-md_color:		$grey5 !default;
+$border-md:				1px solid $border-md_color;
+$border-dk_color:		$grey6 !default;
+$border-dk:				1px solid $border-dk_color;
+$focus-outline_color:	$blue4 !default;
+
+
+// Generic border-radius
+
+$border-radius_sm:  	2px !default;
+$border-radius_md:  	4px !default;
+$border-radius_lg:  	6px !default;
+
+
+// links
+
+$link_color:			$blue8 !default;
+$link_hover:			$orange5 !default;
+$link-bg_color:         white !default;
+
+
+	
+// -------------------------------------------------------------------------------
+//
+// Dimensions
+//
+// Breakpoints, typical supported devices.
+//
+// -------------------------------------------------------------------------------
+
+$iphone6_w:             1334px;
+$iphone6_h:             750px;
+
+$temp_max-width:        $iphone6_w;
+
+
+// -------------------------------------------------------------------------------
+//
+// Typography
+//
+// Brand colors and general layout elements
+//
+// -------------------------------------------------------------------------------
+
+
+//Default font base
+
+$fontstack:				arial, helvetica, verdana, sans-serif !default;
+$fontstack_sm:			verdana, arial, helvetica, sans-serif !default;
+$fontstack_md:			arialMedium, arial, helvetica, sans-serif !default;
+$fontstack_li:			arialLight, arial, helvetica, sans-serif !default;
+$text_color:			$grey9 !default;
+$text-reverse_color:	$grey1 !default;
+$font-size_sm: 			11px !default; // default font size.
+$font-size_md: 			14px !default; // default font size.
+$line-height-base:      1.428571429 !default; // (1.7142857 for 24/14)
+
+
+//headings
+$head_line-height:		1.1 !default;
+$head-space-after:		8px !default;
+
+$h1_color:				$grey10 !default;
+$h2_color:				$grey10 !default;
+$h3_color:				$grey9 !default;
+$h4_color:				$grey9 !default;
+$h5_color:				$grey9 !default;
+$h6_color:				$grey10 !default;
+
+$h1_size:				floor(($font-size_md * 1.72)) !default; //~24px
+$h2_size:				floor(($font-size_md * 1.43)) !default; //~20px
+$h3_size:				floor(($font-size_md * 1.29)) !default; //~18px
+$h4_size:				$font-size_md !default;
+$h5_size:				floor(($font-size_md * 0.86)) !default; //~12px
+$h6_size:				floor(($font-size_md * 0.79)) !default; //~11px - small cap
+
+$h1_weight:				700 !default;
+$h2_weight:				700 !default;
+$h3_weight:				700 !default;
+$h4_weight:				500 !default;
+$h5_weight:				700 !default;
+$h6_weight:				400 !default;
+
+
+// lists
+
+$list_size:				13px !default;
+$list_lineheight:      	1.3846153 !default; // 18/13
+
+
+// Color text
+
+$text_red:				$red4 !default;
+$text_amber:			$orange6 !default;
+$text_green:			$green7 !default;
+$text_gold:				$gold2 !default;
+
+
+
+// -------------------------------------------------------------------------------
+//
+// Overall site structures
+//
+// Main nav, background color, footer.
+//
+// -------------------------------------------------------------------------------
+
+// Background color
+
+
+$body-bg_color:			$grey4 !default;
+
+
+// Main nav
+
+$nav_color:				$grey1 !default;
+$nav-bg_color:			$brand_color2 !default;
+$nav_height:			48px !default;
+$nav-link_color:		$grey1 !default;
+$nav-link_hover:		$grey9 !default;
+$nav-link_size:			14px !default;
+$nav-link_lineheight:	$nav_height !default;
+$nav-link_padding:		16px 12px !default;
+$nav-link-bg_hover:		lighten($green3,10) !default;
+$nav-link_active:		$grey9 !default;
+$nav-link-bg_active:	$green3 !default;
+$nav-icon_color:		$grey6 !default;
+$nav-icon_hover:		$orange5 !default;
+
+$nav-dropdown_color:		$grey9 !default;
+$nav-dropdown-bg_color:		$grey1 !default;
+$nav-dropdown-bg_hover:		$blue1 !default;
+$nav-dropdown_shadow:		0 2px 4px rgba(0, 0, 0, 0.15) !default;
+
+$user-name_size:		11px !default;
+$user-name_color:		$green3 !default;
+
+
+// Footer
+
+$footer-displacement:		-84px !default; //shift footer up 80 px to bring it with the 100% page height;
+
+$footer_size:				11px !default;
+$footer-link_color:			$grey9 !default;
+
+$footer-top-bg_color:		$grey2 !default;
+$footer-top_height:			40px !default;
+$footer-bottom-bg_color:	$brand_color2 !default;
+$footer-bottom_height:		44px !default;
+
+$footer-slogan_margin:		18px 0 0 16px !default;
+$footer-logo_margin:		13px 16px 0 0 !default;
+
+
+// Main content
+
+$main_margin:				24px auto  0 !default; // center main content.
+$main_padding:				0 0 100px!default; //offset footer negative margin.
+
+// Page header
+
+$page-header_size:			$h1_size !default;
+$page-header_color:			$grey10 !default;
+$page-header_height:		48px !default;
+$page-header_shadow:		0 2px 2px rgba(0,0,0,.05) !default;
+
+
+// Default column widths
+
+$main-col_width:			684px !default;
+$aside-col_width:			260px !default;
