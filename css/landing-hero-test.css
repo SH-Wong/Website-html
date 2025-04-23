@@ -1,0 +1,86 @@
+:root{
+    --color1:   230,240,250;
+    --color2:   105,140,170;
+    --color3:   205, 215, 220;
+    --color-interactive: 148,100,255;
+    --circle-size: 150%;
+    --blending: hard-light;
+}
+
+
+#landing-hero{
+    background: linear-gradient(40deg, rgb(var(--color1)), rgb(var(--color2)));
+    overflow: hidden;
+
+    .g1{
+       position: absolute;
+       background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 25%) no-repeat;
+       mix-blend-mode: var(--blending);
+       mix-blend-mode:luminosity;
+
+       width: calc(var(--circle-size) * 2);
+       height:calc(var(--circle-size) * 2);
+       top: calc(50% - var(--circle-size));
+       left: calc(50% - var(--circle-size) * 2 / 2);
+       
+       transform-origin: center center;
+       animation: moveVertical 40s ease infinite;
+
+       opacity: 1;
+    }
+
+    
+    .g2{
+        position: absolute;
+        background: radial-gradient(circle at center, rgb(var(--color2), 0.8) 0, rgba(var(--color2), 0) 20%) no-repeat;
+        mix-blend-mode: var(--blending);
+        width: calc(var(--circle-size) * 1.5);
+        height:calc(var(--circle-size) * 1.5);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2); 
+      
+        transform-origin: calc(50% - 200px);
+        animation: moveInCircle 30s reverse infinite; 
+
+        opacity: 1;
+     }
+
+     .g3{
+        position: absolute;
+        background: radial-gradient(circle at center, rgb(var(--color3), 0.8) 0, rgba(var(--color3), 0) 20%) no-repeat;
+        mix-blend-mode: var(--blending);
+        width: calc(var(--circle-size) * 2);
+        height:calc(var(--circle-size) * 2);
+        top: calc(50% - var(--circle-size) / 2 - 200px);
+        left: calc(50% - var(--circle-size) / 2 - 100px);
+
+        transform-origin: calc(50% - 300px);
+        animation: moveInCircle 40s linear infinite; 
+
+        opacity: 1;
+     }
+}
+
+@keyframes moveInCircle{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical{
+    0%{
+        transform: translateY(-50%);
+    }
+    50%{
+        transform: translateY(50%);
+    }
+    100%{
+        transform: translateY(-50%);
+    }
+}
