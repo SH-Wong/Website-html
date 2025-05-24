@@ -6,7 +6,7 @@
     --grey-2:#eaeaea;
     --grey-3:#cfcfcf;
     --grey-4:#666666;
-    --grey-5:#333333;
+    --grey-5:#243136;
     
     --amber-1:#fefbf1;
     --amber-2:#ffecb3;
@@ -21,8 +21,8 @@
     --blue-5:#0E59A4;
     
     /* font stack */
-    --display-font:League Spartan, Arial, Helvetica, sans-serif;
-    --copy-font:Roboto, Arial, Helvetica, sans-serif;
+    --display-font: Inter, Arial, Helvetica, sans-serif;
+    --copy-font: Inter, Arial, Helvetica, sans-serif;
     
     --space-xl:80px;
     --space-lg:40px;
@@ -37,13 +37,7 @@ body{
     font-family: var(--copy-font);
     letter-spacing: 0.03rem;
     line-height: 28px;
-    margin-left:24px;
-}
-
-@media (max-width:575px) {
-    body{
-        margin-left: 0;
-    }
+    color: var(--grey-5);
 }
 
 .container-fluid hr{
@@ -98,162 +92,7 @@ li{
     border-radius: 12px !important;
 }
 
-/* landing page */
-#landing-hero-wrapper{
-    /* 
-    background:linear-gradient(-200deg, #c59a0b, #c59a0b, #ef5f5f, #ffb374, #d840b6, #009D97, #009D97); 
-    animation: bg 70s linear infinite;
-    */
-    background-size: 700% 700%;
-}
 
-/* Key frame for gradient animation */
-/*
-@keyframes bg{
-    0%{
-        background-position: 0% 0%;
-    }
-    50%{
-        background-position: 100% 100%;
-    }
-    100%{
-        background-position: 0% 0%;
-    }
-}
-*/
-
-#landing-hero{
-    position: relative;
-    
-    &::after{
-        display: block;
-        content:"";
-        height:calc(100%);
-        width:100%;
-        position: absolute;
-        background-color: #eaeaea;
-        background:linear-gradient(-25deg, #e4e4e4, #EFEFEF); 
-        top:0;
-        left:0;
-        z-index: -1
-    }
-    
-    & img{
-        aspect-ratio: 2/1;
-        max-width: 100%;
-        width:100%;
-        max-height:580px;
-        min-height:200px;
-        object-fit:cover;
-        z-index: 1;
-        position: relative;
-    }
-}
-
-
-#landing-intro{
-    
-    padding: var(--space-lg); 
-    position: relative;
-
-    & > div {
-        margin: auto;
-     }
-        
-    #hi{
-        font-family: var(--display-font);
-        font-style: normal;
-        font-size: 40px;
-        font-weight: 500;
-        position:absolute;
-        display: block;
-        width:auto;
-        top:-79px;
-        right:-40px;
-        animation: 
-            float 6s ease-in-out infinite,
-            fadein 1.5s ease-in;
-        text-shadow: 2px 6px 12px rgba(0,0,0,0.25);
-        z-index: 1;
-        
-        @media (max-width: 767px) {
-            & {
-                margin-right: 16px;
-            }
-        }
-
-        &::after{
-            display: block;
-            content:"";
-            background-color: black;
-            height:0.10em;
-            width:0.6em;
-            rotate: -45deg;
-            position: relative;
-            left:-24px;
-            bottom:-10px
-        }
-    }
-
-    #avatar{
-        vertical-align: top; 
-        width: 64px; 
-        height:64px; 
-        margin-right:20px; 
-        margin-bottom: var(--space-sm);
-        border-radius: 200px;
-        border: 2px solid white;
-        box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
-        filter: grayscale(0.1);
-
-        &:hover{
-            box-shadow: 4px 4px 8px rgba(0,0,0,0.1), -4px 4px 8px rgba(0,0,0,0.1)
-            , 0px 8px 16px rgba(0,0,0,0.05);
-            margin-top: -1px;
-            margin-bottom: calc(var(--space-sm) + 1px);
-            filter:saturate(1.33);
-        }
-
-        @media (max-width: 575px) {
-            & {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    }
-
-    #intro-text{
-        display: inline-block; 
-        width:calc(100% - 92px);
-
-        @media (max-width: 575px) {
-            & {width:100%;}
-        }
-    }
-}
-
-@keyframes float {
-	0% {
-		transform: translatey(0);
-	}
-	50% {
-        transform: translatey(8px);
-	}
-	100% {
-		transform: translatey(0);
-	}
-}
-
-@keyframes fadein {
-    0%{
-        opacity:0;
-    }
-
-    100%{
-        opacity:100;
-    }
-}
 
 
 #landing-content-wrapper{

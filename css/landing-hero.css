@@ -1,0 +1,266 @@
+/*reference: https://www.youtube.com/watch?v=Ml-B-W91gtw*/
+:root{
+    --bg-color1:   216,212,207;
+    --bg-color2:   58,49,47;
+    --color1:   216,212,207;
+    --color2:   34,39,47;
+    --color3:   205, 215, 220;
+    --color-interactive: 148,100,255;
+}
+
+
+/* Title */
+
+#intro-text{
+    position:relative;
+    left:120px;
+    top: 46%;
+    transform: translateY(-48%);
+    
+    @media (max-width:880px) { &{
+        left: 10%;
+    }}
+
+    p{
+        width:480px;
+        margin-bottom: 3rem;
+        
+        @media (max-width:880px) { &{
+            width: 80%;
+        }}
+        @media (max-width:700px) { &{
+            
+        }}
+    }
+
+    #site-title{
+        font-size: 96px;
+        text-transform: uppercase;
+        line-height: 96px;
+        font-weight: 600;
+
+        @media (max-width:880px) { &{
+            font-size: 11vw;
+            line-height: 1em;
+        }} 
+
+        #satisfying{
+            font-weight: 500;
+            font-family: Arbutus Slab;
+            position: relative;
+
+            &::after{
+                position: absolute;
+                content:"Satisfying";
+                top:0px;
+                left:0;
+            }
+        }
+    }
+}
+
+/* Hero image */
+
+#landing-hero{
+    position: relative;
+    height: 60vw;
+    max-height: 100vh;
+    min-height: 720px;
+    background: linear-gradient(122deg, rgb(var(--bg-color1)), rgb(var(--bg-color2)));
+
+    @media (max-width:700px) { &{
+        min-height: 100vh;
+    }}
+
+    .hero-shapes{
+        position: absolute;
+    }
+
+    /* individual shapes */
+    
+    .hero-circle{
+        width:14vw;
+        right:10%;
+        top:15%;
+        mix-blend-mode: luminosity;
+        animation: hovering 15s ease infinite;
+    }
+
+    .hero-triangle{
+        width:108px;
+        height:120px;
+        bottom:80px;
+        left:20%;
+        animation: hovering 60s infinite;
+    }
+
+    .hero-finewaves{
+        width: 25vw;
+        min-width:280px;
+        aspect-ratio: 1;
+        border-radius: 999px;
+        object-fit: none;
+        right:40px;
+        bottom:-140px;
+        mix-blend-mode:color-burn;
+        opacity: 0.33;
+    }
+}
+
+
+/* Background shapes and movements */
+
+#landing-hero{
+    overflow: hidden;
+
+    /* Hero decorators */
+    .g1{
+        /* overlay large circle */
+        position: absolute;
+        background: 
+            radial-gradient(circle at 100%, rgba(204,204,204,1), rgba(199,199,199,0)),
+    	    url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        border-radius: 9999px;
+        mix-blend-mode:soft-light;
+        filter: blur(1px) contrast(500%) brightness(80%) ;
+
+        width: 110vw;
+        aspect-ratio: 1;
+        min-width: 1300px;
+        top: -70%;
+        left: 19%;
+        
+        transform-origin: center center;
+        animation: hovering-large 90s infinite;
+        opacity: 1;
+    }
+
+    .g2{
+        position: absolute;
+        background: linear-gradient(230deg, #CCC 29.77%, #585341 70.5%);
+        border-radius: 9999px;
+        mix-blend-mode:luminosity;
+        filter: blur(5px);
+        opacity: 0.1;
+
+        width: 300px;
+        height:300px;
+        bottom:25%;
+        left: 50px;
+        
+        transform-origin: center center;
+        animation: hovering-large 10s ease infinite;
+    }
+
+    .g3{
+        position: absolute;
+        background: linear-gradient(30deg, #CCC 29.77%, #585341 70.5%);
+        border-radius: 9999px;
+        mix-blend-mode:luminosity;
+        filter: blur(10px);
+        opacity: 0.10;
+        width: 50%;
+        aspect-ratio: 1;
+        top:-35%;
+        left:-60px;
+        
+        transform-origin: center center;
+        animation: moveVertical 180s ease infinite;
+
+    }
+
+    .g4{
+        position: absolute;
+        background: linear-gradient(220deg, #FFF 10%, rgba(255, 255, 255, 0.03) 75%);
+        border-radius: 9999px;
+        mix-blend-mode:soft-light;
+        filter: blur(70px);
+        opacity: 1;
+        width: 400px;
+        aspect-ratio: 1;
+        top:18%;
+        right: 280px;
+        
+        transform-origin:1cqh;
+        animation: moveInCircle 180s ease infinite;
+
+    }
+
+    .g5{
+        position: absolute;
+        background: linear-gradient(30deg,#9e926c 55.59%, #4E3D05 93.26%);
+        border-radius: 9999px;
+        mix-blend-mode:luminosity;
+        filter: blur(10px);
+        opacity: 0.1;
+        width: 100px;
+        aspect-ratio: 1;
+        top: 38%;
+        right: 25%;
+    }
+
+    .g6{
+        position: absolute;
+        background: linear-gradient(15deg, #FFF 24.21%, rgba(255, 255, 255, 0.10) 71.63%);
+        border-radius: 9999px;
+        mix-blend-mode:soft-light;
+        filter: blur(40px);
+        opacity: 0.5;
+        width: 800px;
+        aspect-ratio: 1;
+        bottom: -20%;
+        left: 180px;
+        
+        transform-origin:2cqh;
+        animation: moveInCircle 60s infinite;
+    } 
+   
+}
+
+@keyframes moveInCircle{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical{
+    0%{
+        transform: translateY(-50%);
+    }
+    50%{
+        transform: translateY(50%);
+    }
+    100%{
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes hovering{
+    0%{
+        transform: translateY(-7%);
+    }
+    50%{
+        transform: translateY(7%);
+    }
+    100%{
+        transform: translateY(-7%);
+    }
+}
+
+@keyframes hovering-large{
+    0%{
+        transform: translateY(6%);
+    }
+    50%{
+        transform: translateY(-6%);
+    }
+    100%{
+        transform: translateY(6%);
+    }
+}

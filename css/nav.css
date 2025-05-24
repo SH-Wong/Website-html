@@ -2,36 +2,40 @@
 .navbar {
     width: 100%;
     padding-top: 28px;
-    padding-left: 12px;
-    padding-right: 12px;
-    font-family: League Spartan, Arial, Helvetica, sans-serif;
+    padding-left: 40px;
+    padding-right: 40px;
     z-index: 2;
 
     #landing-page &{
-        position: absolute; width:calc(100% - 24px);
+        position: absolute;
     }
+
+    @media (max-width: 767px) { &{
+        padding-left: 16px;
+        padding-right: 16px;
+    }}
 }
 
-@media (max-width: 575px) {
-    #landing-page > .navbar{width:100%;}
-}
+
 
 .navbar-brand{
-    color: var(--project-color-primary, black) !important;
     font-size: 16px;
     line-height: 16px;
-    font-weight: 600;
+    color: var(--grey-5) !important;
+}
 
-    & span{
-        color: var(--project-color-secondary, #cc9a1b);
-        font-weight: 400;
-    }
+#avatar{
+    width: 32px; 
+    height: 32px; 
+    border-radius: 200px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+    filter: grayscale(0.1);
+    margin-right: var(--space-xs);
+    margin-bottom: 4px;
 }
 
 .nav-link{
-    color: var(--project-color-primary, black);
-    font-size: 14px;
-    font-weight: 600;
+    color: var(--grey-5) !important;
 
     &:hover{
         color: var(--project-color-tertiary, white);
@@ -52,9 +56,5 @@
 @media (min-width: 576px) {
     .nav-item {
         background-color: transparent;
-        
-        & > .nav-link{
-            color:var(--project-color-primary, black) !important;
-        }
     }
 }
