@@ -20,41 +20,52 @@
     @media (max-width:880px) { &{
         left: 10%;
     }}
+}
 
-    p{
-        width:480px;
-        margin-bottom: 3rem;
-        
-        @media (max-width:880px) { &{
-            width: 80%;
-        }}
-        @media (max-width:700px) { &{
-            
-        }}
-    }
+#intro-text p{
+    width:480px;
+    margin-bottom: 3rem;
+    
+    @media (max-width:880px) { &{
+        width: 80%;
+    }}
 
-    #site-title{
-        font-size: 96px;
-        text-transform: uppercase;
-        line-height: 96px;
-        font-weight: 600;
+    @media (max-width:500px) { &{
+        font-size: 24px;
+        line-height: 2em;
+        margin-bottom: 6px;
+        margin-top: 14px;
+    }} 
+}
 
-        @media (max-width:880px) { &{
-            font-size: 11vw;
-            line-height: 1em;
-        }} 
+#site-title{
+    font-size: 96px;
+    text-transform: uppercase;
+    line-height: 96px;
+    font-weight: 600;
 
-        #satisfying{
-            font-weight: 500;
-            font-family: Arbutus Slab;
-            position: relative;
+    @media (max-width:880px) { &{
+        font-size: 80px;
+        line-height: 1em;
+    }} 
+    @media (max-width:700px) { &{
+        font-size: 60px;
+    }} 
+    @media (max-width:500px) { &{
+        font-size: 11.5vw;
+        line-height: 1.4em;
+    }} 
 
-            &::after{
-                position: absolute;
-                content:"Satisfying";
-                top:0px;
-                left:0;
-            }
+    #satisfying{
+        font-weight: 500;
+        font-family: "Arbutus Slab", serif;
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content:"Satisfying";
+            top:0px;
+            left:0;
         }
     }
 }
@@ -63,13 +74,16 @@
 
 #landing-hero{
     position: relative;
-    height: 60vw;
-    max-height: 100vh;
+    height: 100vh;
     min-height: 720px;
     background: linear-gradient(122deg, rgb(var(--bg-color1)), rgb(var(--bg-color2)));
 
     @media (max-width:700px) { &{
-        min-height: 100vh;
+        min-height: 600px;
+    }}
+
+    @media (max-width:500px) { &{
+        max-height:700px;
     }}
 
     .hero-shapes{
@@ -94,16 +108,18 @@
         animation: hovering 60s infinite;
     }
 
-    .hero-finewaves{
+    .hero-waves{
         width: 25vw;
         min-width:280px;
         aspect-ratio: 1;
         border-radius: 999px;
-        object-fit: none;
+        object-fit:cover;
         right:40px;
         bottom:-140px;
         mix-blend-mode:color-burn;
         opacity: 0.33;
+        transform-origin: center center;
+        animation: moveInCircle 300s ease infinite;
     }
 }
 
@@ -119,11 +135,10 @@
         position: absolute;
         background: 
             radial-gradient(circle at 100%, rgba(204,204,204,1), rgba(199,199,199,0)),
-    	    url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    	    url("data:image/svg+xml,%3Csvg viewBox='0 0 380 380' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.4;
+        box-shadow: 0 0 2px 01px #a7a7a7;
         border-radius: 9999px;
-        mix-blend-mode:soft-light;
-        filter: blur(1px) contrast(500%) brightness(80%) ;
-
         width: 110vw;
         aspect-ratio: 1;
         min-width: 1300px;
@@ -131,8 +146,8 @@
         left: 19%;
         
         transform-origin: center center;
-        animation: hovering-large 90s infinite;
-        opacity: 1;
+        animation: hovering-large 120s infinite;
+
     }
 
     .g2{

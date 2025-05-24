@@ -1,4 +1,4 @@
-/* Global varibles to for overriding css */
+/* Global variables to for overriding css */
 :root {
     /* colors */
     --site-background-color: white;
@@ -21,8 +21,8 @@
     --blue-5:#0E59A4;
     
     /* font stack */
-    --display-font: Inter, Arial, Helvetica, sans-serif;
-    --copy-font: Inter, Arial, Helvetica, sans-serif;
+    --display-font: "Inter", Arial, Helvetica, sans-serif;
+    --copy-font: "Inter", Arial, Helvetica, sans-serif;
     
     --space-xl:80px;
     --space-lg:40px;
