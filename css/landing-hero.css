@@ -16,9 +16,35 @@
     left:120px;
     top: 46%;
     transform: translateY(-48%);
+
+    .mobile-content{
+        display: none;
+    }
     
     @media (max-width:880px) { &{
         left: 10%;
+    }}
+
+    @media (max-width:500px) { &{
+
+        left: 6%;
+
+        .desktop-content{
+            display: none;
+        }
+
+        #site-title{
+            display: none;
+        }
+        
+        .mobile-content{
+            display:inline-block;
+            text-transform: uppercase;
+            span{
+                font-weight: 700;
+            }
+        }
+
     }}
 }
 
@@ -31,10 +57,9 @@
     }}
 
     @media (max-width:500px) { &{
-        font-size: 24px;
-        line-height: 2em;
-        margin-bottom: 6px;
-        margin-top: 14px;
+        font-size: 32px;
+        line-height: 1.5em;
+        margin-top: 140px;
     }} 
 }
 
