@@ -8,6 +8,34 @@
     --color-interactive: 148,100,255;
 }
 
+/* Parallax effect test
+
+html{
+    overflow: hidden;
+}
+
+body{
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height:100vh;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+
+.gradient-container, #landing-content-wrapper{
+    transform-style: preserve-3d;
+}
+
+.gradient-container{
+    height:100vh;
+    transform: translateZ(-2px) scale(3);
+    z-index: -1;
+}
+
+#landing-content-wrapper{
+    z-index: 1;
+} 
+*/
 
 /* Title */
 
@@ -17,11 +45,11 @@
     top: 50%;
     transform: translate(-50%,-50%);
     text-shadow: -50px -50px 120px rgba(0, 0, 0, 1);
-
+    
     .hi{
-        font-size: 39.5px;
+        font-size: 37.1px;
         font-weight: 600;
-        color:#ffca1b;
+        color: Gold;
         line-height: 1.5;
         text-transform:uppercase;
     }
@@ -57,26 +85,26 @@
 }
 
 #intro-text p{
-    font-size: 14px;
-    width:340px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    width:325px;
     margin-bottom: 1rem;
 
     @media (max-width:500px) { &{
         font-size: 32px;
-        line-height: 1.5em;
         margin-top: 80px;
     }} 
 }
 
-
-
 /* Hero image */
+
 
 #landing-hero{
     position: relative;
     height: 100vh;
     min-height: 720px;
     background: linear-gradient(122deg, rgb(var(--bg-color1)), rgb(var(--bg-color2)));
+
 
     @media (max-width:700px) { &{
         min-height: 600px;
@@ -88,6 +116,11 @@
 
     .hero-shapes{
         position: absolute;
+        transition: scale 1000ms;
+
+        &:hover{
+            scale:1.05;
+        }
     }
 
     /* individual shapes */
@@ -110,6 +143,10 @@
         @media (max-width:880px) { &{
             left:10%;
         }}
+
+        &:hover{
+            scale:1.1;
+        }
     }
 
     .hero-waves{
@@ -154,7 +191,12 @@
         left: 19%;
         
         transform-origin: center center;
-        animation: hovering-large 120s infinite;
+        animation: hovering-large 120s infinite, moveInCircle 900s linear infinite;
+        
+        transition: scale 2600ms;
+        &:hover{
+            scale:1.03;
+        }
 
     }
 
@@ -173,6 +215,11 @@
         
         transform-origin: center center;
         animation: hovering-large 10s ease infinite;
+
+        transition: scale 1000ms linear;
+        &:hover{
+            scale:1.05;
+        }
     }
 
     .g3{
@@ -189,6 +236,12 @@
         
         transform-origin: center center;
         animation: moveVertical 180s ease infinite;
+        
+        transition: scale 1000ms linear;
+        &:hover{
+            scale:1.05;
+        }
+    }
 
     }
 
@@ -197,7 +250,7 @@
         background: linear-gradient(220deg, #FFF 10%, rgba(255, 255, 255, 0.03) 75%);
         border-radius: 9999px;
         mix-blend-mode:soft-light;
-        filter: blur(70px);
+        filter: blur(45px);
         opacity: 1;
         width: 400px;
         aspect-ratio: 1;
@@ -228,14 +281,14 @@
         border-radius: 9999px;
         mix-blend-mode:soft-light;
         filter: blur(40px);
-        opacity: 0.5;
-        width: 800px;
+        opacity: 0.2;
+        width: 1000px;
         aspect-ratio: 1;
         bottom: -20%;
         left: 180px;
         
         transform-origin:2cqh;
-        animation: moveInCircle 60s infinite;
+        animation: moveInCircle 80s infinite;
     } 
    
 }
@@ -287,3 +340,4 @@
         transform: translateY(6%);
     }
 }
+

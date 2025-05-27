@@ -1,0 +1,42 @@
+#landing-content-wrapper{
+    padding:80px 0;
+    background-color: white;
+}
+
+
+#landing-projects{
+
+    & .project{
+         margin-top: 40px;
+    }
+    
+    & a{
+        color: var(--grey-5);
+        transition: all 0.5s ease;
+        text-decoration:none;
+
+        &:hover{
+            text-decoration: none;
+            color:var(--blue-4);
+
+            .image{
+                background-size: 104% !important;
+            }
+        }
+    }
+
+    & .image {
+        border-radius: 12px;
+        aspect-ratio: 1.618033988749/1;
+        max-width: 100%;
+        object-fit:cover;
+        border: 1px solid var(--grey-2);
+        background-color: var(--grey-1);
+        margin-bottom: 20px;
+
+        background-size: 100%;
+        background-position: 50%;
+
+        transition: background-size 1200ms;
+    }
+}

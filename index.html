@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="./css/global.css">
 	<link rel="stylesheet" href="./css/nav.css">
 	<link rel="stylesheet" href="./css/landing-hero.css">
+	<link rel="stylesheet" href="./css/landing-content.css">
 	<!-- Page level styles: -->
 </head>
 
@@ -32,13 +33,25 @@
 
 	<section id="landing-hero" class="gradient-container">
 
+		<!-- Deprecated svg filter
+		<svg xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<filter id="goo">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+				<feBlend in="SourceGraphic" in2="goo" />
+				</filter>
+			</defs>
+		</svg> -->
 		<!-- Hero decorators -->
-		<div class="g1"></div>
-		<div class="g2"></div>
+
 		<div class="g3"></div>
 		<div class="g4"></div>		
 		<div class="g5"></div>
 		<div class="g6"></div>
+		<div class="g1"></div>
+		<div class="g2"></div>		
+
 		<img class= "hero-shapes hero-triangle" src="./img/landing/hero-triangle.png">
 		<img class= "hero-shapes hero-circle" src="./img/landing/hero-circle.png">
 		<img class= "hero-shapes hero-waves" src="./img/landing/hero-Waves.png">
@@ -47,7 +60,7 @@
 		<!-- Hero title -->
 		<div id="intro-text">
 			<p class="desktop-content">
-				<span class="hi">Hi I am Siu Hang </span></br>
+				<span class="hi">Hi, I am Siu Hang </span></br>
 				A designer with 15+ years of experience in UX, UI and Visual Design. Helping organizations to craft Effective & satisfying
 				experiences.
 			</p>
@@ -63,31 +76,31 @@
 			<h2>PROJECTS</h2>
 			<div class="row">
 				<a class="project col-md-6" href="projects/project-pcfbuilder.html">
-					<img class="image" src="/img/landing/project-pcfbuilder.jpg" alt="image" aria-hidden>
+					<div class="image" style="background-image: url(/img/landing/project-pcfbuilder.jpg);" alt="image" aria-hidden></div>
 					<h3>M2030: Product carbon footprint builder</h3>
 					<p>A product-level emissions calculator to help manufactures understand their products environmental impact. And allow the exchange of results between organizations.</p>
 				</a>
 				
 				<a class="project col-md-6" href="projects/project-M2030Analytics.html">
-					<img class="image" src="/img/landing/project-M2030Analytics.jpg" alt="image" aria-hidden>
+					<div class="image"  style="background-image: url(/img/landing/project-M2030Analytics.jpg)" alt="image" aria-hidden></div>
 					<h3>M2030: Supply-chain analytics dashboard</h3>
 					<p>Data analytic designs to allow corporations to access environmental data from their suppliers, and provide actionable insights to help plan improvements.</p>
 				</a>
 				
 				<a class="project col-md-6" href="projects/project-ALDesignSystem.html">
-					<img class="image" src="/img/landing/project-ALDesignSystem.jpg" alt="image" aria-hidden>
+					<div class="image"  style="background-image: url(/img/landing/project-ALDesignSystem.jpg)" alt="image" aria-hidden></div>
 					<h3>ActiveLearn: Design system</h3>
 					<p>Develop upon a legacy designs to create a design system that cater for a complex online education platform.</p>
 				</a>
 
 				<a class="project col-md-6" href="projects/project-ALSoW.html">
-					<img class="image" src="/img/landing/project-ALSoW.png" alt="image" aria-hidden>
+					<div class="image"  style="background-image: url(/img/landing/project-ALSoW.png)" alt="image" aria-hidden></div>
 					<h3>ActiveLearn: Interactive Scheme of Work</h3>
 					<p>An online planning tool to help teacher plan and deliver the curriculum. From broad level planning, to details of individual lessons.</p>
 				</a>
 
 				<a class="project col-md-6" href="projects/project-BookCovers.html">
-					<img class="image" src="/img/landing/project-bookCovers.jpg" alt="image" aria-hidden>
+					<div class="image"  style="background-image: url(/img/landing/project-bookCovers.jpg)" alt="image" aria-hidden></div>
 					<h3>Pearson: Book cover designs</h3>
 					<p>Designs of book covers for a variety of educational text books and novels aims at the UK secondary schools market.</p>
 				</a>
