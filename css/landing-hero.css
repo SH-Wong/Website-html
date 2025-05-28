@@ -1,12 +1,5 @@
 /*reference: https://www.youtube.com/watch?v=Ml-B-W91gtw*/
-:root{
-    --bg-color1:   216,212,207;
-    --bg-color2:   58,49,47;
-    --color1:   216,212,207;
-    --color2:   34,39,47;
-    --color3:   205, 215, 220;
-    --color-interactive: 148,100,255;
-}
+
 
 /* Parallax effect test
 
@@ -44,14 +37,16 @@ body{
     left:50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    text-shadow: -50px -50px 120px rgba(0, 0, 0, 1);
-    
+    text-shadow: 0px 0px 80px rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+        
     .hi{
         font-size: 37.1px;
         font-weight: 600;
         color: Gold;
         line-height: 1.5;
         text-transform:uppercase;
+        text-shadow: -20px -25px 100px rgba(0, 0, 0, 0.66);
     }
 
     .mobile-content{
@@ -89,6 +84,7 @@ body{
     line-height: 1.5;
     width:325px;
     margin-bottom: 1rem;
+    color:var(--grey-5);
 
     @media (max-width:500px) { &{
         font-size: 32px;
@@ -96,14 +92,41 @@ body{
     }} 
 }
 
-/* Hero image */
+#downToProjects{
+    display: block;
+    margin: auto;
+    margin-top:32px;
+    width:28px;
+    aspect-ratio: 1;
+    background-image: url(/img/landing/AiOutlineDownCircle.png);
+    background-size: cover;
+    animation:hovering 4000ms linear infinite;
+    filter:blur(1px);
+    opacity:0.25;
+    transition: filter 1200ms, opacity 600ms;
+}
+
+#intro-text:hover{
+    #downToProjects{
+        filter:blur(0);
+        opacity:0.66;
+    }
+}
+
+
+
+/* Hero image 
+Animated gradient reference: https://www.sliderrevolution.com/resources/css-animated-gradient/
+*/
 
 
 #landing-hero{
     position: relative;
     height: 100vh;
     min-height: 720px;
-    background: linear-gradient(122deg, rgb(var(--bg-color1)), rgb(var(--bg-color2)));
+
+    background: linear-gradient(122deg, rgb(227 219 207), rgb(133 131 132), rgb(115 83 83));
+
 
 
     @media (max-width:700px) { &{
@@ -241,8 +264,6 @@ body{
         &:hover{
             scale:1.05;
         }
-    }
-
     }
 
     .g4{
