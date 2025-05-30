@@ -114,18 +114,16 @@ body{
 }
 
 
-
 /* Hero image 
 Animated gradient reference: https://www.sliderrevolution.com/resources/css-animated-gradient/
 */
-
 
 #landing-hero{
     position: relative;
     height: 100vh;
     min-height: 720px;
 
-    background: linear-gradient(122deg, rgb(227 219 207), rgb(133 131 132), rgb(115 83 83));
+    background: linear-gradient(145deg, rgb(211, 201, 187)15%, rgb(133 131 132), rgb(102, 64, 64)85%);
 
 
 
@@ -203,7 +201,7 @@ Animated gradient reference: https://www.sliderrevolution.com/resources/css-anim
         position: absolute;
         background: 
             radial-gradient(circle at 100%, rgba(204,204,204,1), rgba(199,199,199,0)),
-    	    url("data:image/svg+xml,%3Csvg viewBox='0 0 380 380' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    	    url("data:image/svg+xml,%3Csvg viewBox='0 0 420 420' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         opacity: 0.4;
         box-shadow: 0 0 2px 01px #a7a7a7;
         border-radius: 9999px;
