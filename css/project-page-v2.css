@@ -1,0 +1,150 @@
+/* Project page */
+
+.asterisk{
+    color:var(--project-color-tertiary);
+}
+
+.project-page-wrapper{
+    margin:0;    
+    } 
+
+#project-content-wrapper{
+    font-size: 1.125rem; 
+    line-height: 200%;
+
+    & h1{
+        font-family: var(--display-font);
+        font-size: 3.20rem;
+        font-weight: 700;
+    }
+    & h2{font-size: 2.5rem;}
+    & h3{font-size:1.5rem;}
+    & h4{font-size: 1.125rem;font-weight: 700;}
+    & strong{font-weight: 600;}
+    & p, ul, ol, figure{margin-bottom: var(--space-lg);}
+    & p+p{margin-top:0 !important;}
+
+    a{
+        color: var(--project-color-tertiary);
+        
+        &:hover{
+            color:var(--grey-5);
+        }
+    }
+
+}
+
+#spacer-column{
+    margin-left:40px;
+
+    .sidebar{
+        position: fixed;
+    }
+
+    a{
+        text-decoration: none;
+        display: block;
+        width:fit-content;
+        margin-bottom: 1rem;
+
+        &.active, &.active:hover{
+            color: var(--project-color-tertiary);
+        }
+
+        &:hover{
+            color: inherit;
+        }
+    }
+
+    .btn{
+        background:
+            radial-gradient(circle at 100%, rgba(255,255,255,0.85), rgba(255, 255, 255, 0.65)),
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 450 450' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        border:none;
+        color:var(--grey-5);
+
+        &:hover{
+            background:
+            radial-gradient(circle at 100%, rgba(255,255,255,0.75), rgba(255, 255, 255, 0.50)),
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 450 450' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    }
+
+    @media (max-width:767px) { &{
+        display: none;
+    }}
+}
+
+
+#project-intro{
+    padding-bottom: var(--space-xxl);
+
+    .company{
+        width:auto;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--project-color-tertiary);
+        margin-bottom: 32px;
+
+        .fa{
+            color:var(--grey-3);
+            font-size: 1rem;
+            vertical-align: middle;
+            margin-bottom: 4px;
+        }
+
+        &:hover{
+            color: var(--project-color-tertiary);
+            filter:brightness(0.8);
+        }
+    }
+}
+
+
+#project-hero{
+    .image{
+        object-fit:cover;
+    }
+}
+
+.Process-label{
+    margin-bottom:var(--space-xl);
+    display: block;
+}
+
+
+
+.project-stage{    
+    padding-top:var(--space-xl);
+    padding-bottom:var(--space-xl);
+    border-top:1px solid var(--grey-2);
+
+    & > .row:last-of-type{
+        border-bottom:1px solid var(--grey-2);
+        padding-bottom:var(--space-xl);
+    }
+
+    &:last-of-type{
+        & > .row:last-of-type{
+            border:none;
+        }
+    }
+    
+    .stage-title{
+        font-weight: 600;
+        padding-bottom: var(--space-lg);
+    }
+}
+
+.figure-caption{
+    margin-top:var(--space-xs)
+}
+
+
+
+.stage-content{
+    & a{
+        text-decoration: underline;
+    }
+}

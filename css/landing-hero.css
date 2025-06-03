@@ -125,8 +125,6 @@ Animated gradient reference: https://www.sliderrevolution.com/resources/css-anim
 
     background: linear-gradient(145deg, rgb(211, 201, 187)15%, rgb(133 131 132), rgb(102, 64, 64)85%);
 
-
-
     @media (max-width:700px) { &{
         min-height: 600px;
     }}
@@ -212,7 +210,7 @@ Animated gradient reference: https://www.sliderrevolution.com/resources/css-anim
         left: 19%;
         
         transform-origin: center center;
-        animation: hovering-large 120s infinite, moveInCircle 900s linear infinite;
+        animation: hover-and-rotate 450s infinite;
         
         transition: scale 2600ms;
         &:hover{
@@ -348,15 +346,14 @@ Animated gradient reference: https://www.sliderrevolution.com/resources/css-anim
     }
 }
 
-@keyframes hovering-large{
+@keyframes hover-and-rotate{
     0%{
-        transform: translateY(6%);
+        transform: rotate(0deg) translateY(6%);
     }
     50%{
-        transform: translateY(-6%);
+        transform: rotate(180deg) translateY(-6%);
     }
     100%{
-        transform: translateY(6%);
+        transform: rotate(360deg) translateY(6%);
     }
 }
-

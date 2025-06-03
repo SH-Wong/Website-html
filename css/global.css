@@ -5,7 +5,7 @@
     --grey-1:#f7f7f7;
     --grey-2:#eaeaea;
     --grey-3:#cfcfcf;
-    --grey-4:#666666;
+    --grey-4:#667278;
     --grey-5:#243136;
     
     --amber-1:#fefbf1;
@@ -24,6 +24,7 @@
     --display-font: "Inter", Arial, Helvetica, sans-serif;
     --copy-font: "Inter", Arial, Helvetica, sans-serif;
     
+    --space-xxl:120px;
     --space-xl:80px;
     --space-lg:40px;
     --space-md:24px;
@@ -34,7 +35,6 @@
 
 body{
     background-color:var(--site-background-color);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 50%);
     font-family: var(--copy-font);
     letter-spacing: 0.03rem;
     line-height: 28px;

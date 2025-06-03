@@ -9,15 +9,16 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="/js/project-page.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/f9c061934e.js" crossorigin="anonymous"></script>
     <meta name=viewport content="width=device-width, initial-scale=1">
 	<!-- CSS -->
 	<link rel="stylesheet" href="../css/global.css">
 	<link rel="stylesheet" href="../css/nav.css">
-	<link rel="stylesheet" href="../css/project-page.css">
+	<link rel="stylesheet" href="../css/project-page-v2.css">
 	<!-- Page level styles: -->
 		<style>
 			:root{
@@ -39,7 +40,7 @@
 		</style>
 </head>
 
-<body id="project-page">
+<body id="project-page" >
 	<!--Load nav bar-->
 	<div id="navbar">
 		<script>
@@ -49,339 +50,329 @@
 		</script>
 	</div>
 
-	<div id="project-content-wrapper" class="container-fluid">
-		
-		<section id="project-hero-wrapper" class="row pt-5">
-			<div class="col-md-1"></div> <!--spaceer column -->
-			<div id="project-intro" class="col-lg-7 col-md-10">
-				<div id="breadcrumb">
-					<a href="/index.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angle-left"></i> Back</a>
-					<span style="color:var(--project-color-tertiary);">2018 &gt; 2025</span><span class="divider"> | </span>
-					<a href="https://manufacture2030.com/" target="_blank">Manufacture 2030 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-				</div>
-				<h1 class="mt-3">PRODUCT CARBON FOOTPRINT BUILDER</h1>
-				<div id="capacity">
-					<label>CAPACITY:</label>
-					<span class="badge rounded-pill">UX research and design</span>
-					<span class="badge rounded-pill">Interaction design</span>
-				</div>
-				<p class="mt-4">Upcoming global legislations for organizations to report the environment impact of imported goods (in particular CBAM), means that corporations and manufacturers are faced with new needs to calculate Product Carbon Footprints (PCFs) for individual products that are traded across those regions. This presented a new opportunity for Manufacture 2030 (M2030) to help their  users with tools to build PCFs and satisfy reporting demands.</p>
-			</div>
-			<div id="project-hero" class="col-md-12">
-				<img class="image" src="../img/project-pcfbuilder/1-IntroHero.jpg" alt="Image" aria-hidden>
-			</div>
-		</section>
+<div class="project-page-wrapper pt-5 row">
 
-		<section id="Problem" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2">PROBLEM</h2>
-				<div class="stage-content col-md-10">
-					<p>While in recent years, understanding of the importance of sustainability accounting has increased, manufacturing businesses with dedicated resources and matured knowledge of sustainability accounting are still in the minority in the global supply chain. Particularly so in term of PCFs, as a relatively new reporting demand.</p>
-					<p>So to help these manufacturers with varying maturity in sustainability knowledge respond to incoming legislations and customer demands, we asked: <strong><em>Can we enable users to calculate PCFs without extensive sustainability knowledge?</em></strong></p>
-				</div>
-			</div>
-		</section>
-		
-		<section id="Research" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-			<h2 class="stage-title col-md-2">RESEARCH</h2>
-			<div class="stage-content col-md-10">
-				<ul>
-					<li><a href="#ModalLearnFromExperts" data-bs-toggle="modal"><strong>Learn from the experts:</strong> What are PCFs, and how are they calculated?</a></li>
-					<li><a href="#ModalLearnFromCompetitors" data-bs-toggle="modal"><strong>Learn from the competitors:</strong> What is is working well (or not)?</a></li>
-					<li><a href="#ModalLearnFromUsers" data-bs-toggle="modal"><strong>Learn from the users:</strong> What makes a valuable PCF feature? (Survey & persona)</a></li>
-				</ul>
-				<div class="card card-header mt-5">
-					<h3><i class="fa-regular fa-lightbulb"></i> Learning summary</h3>
-					<p>From the various research we derived:</p>
+	<!--spacer column / sidebar -->
+	<div id="spacer-column" class="col-md-2">
+		<div class="sidebar">
+			<a href="/index.html" class="btn btn-secondary btn"><i class="fa-solid fa-angle-left"></i> Back</a></br>
+			<a class="active" href="#project-intro">Overview</a>
+			<a href="#discovery">Discovery</a>
+			<a href="#design">Design</a>
+			<a href="#test&Refine">Test & refine</a>
+			<a href="#MVP">MVP design</a>
+			<a href="#next-step">Next steps</a>
+		</div>
+	</div> <!--spacer column end-->
+
+	<!--Project content -->
+	<div id="project-content-wrapper" class="col-md-8">
+
+		<section id="project-intro" class="target row">
+			<a class="company" href="https://manufacture2030.com/" target="_blank">Manufacture 2030 <i class="fa fa-solid fa-arrow-up-right-from-square"></i></a>
+			
+			<h1 class="mt-3">PRODUCT CARBON </br>FOOTPRINT CALCULATOR</h1>
+
+			<p class="mt-4 col-xxl-8">Global legislations means that corporations and manufacturers are faced with new requirements to report Product-level Carbon Footprints (PCFs) for goods traded across relevant regions. For Manufacture 2030 (M2030) this presented a new opportunity to help their users with tools to satisfy that data requirements.</p>
+			
+			<p class="mt-4 col-xxl-8">As a Product designer, I led the end-to-end design process of the PCF Builder. Working with stakeholders to thoroughly research the problem space and created usable designs for a complex process to help users calculate and better understand their products’ carbon emissions.</p>
+			
+			<img id="project-hero" class="image col-12 mt-4" src="../img/project-pcfbuilder/1-IntroHero.jpg" alt="Image" aria-hidden>
+
+			<div id="summary" class="row pt-5">
+				<div class="my-role col-sm-auto" style="margin-right:40px">
+					<strong>My role</strong>
 					<ul>
-						<li><strong>A highly guided design that assumes minimal specialist knowledge and language would be ideal.</strong>As a majority of M2030 users have indicated low maturity and knowledge on PCFs. </li>
-						<li><strong>Some automations is essential but should be balanced with a good level of accuracy and specificity.</strong>This is important to encourage adoption, as manufacturer indicated that ‘resources’ is the 2nd largest limiting factor in building PCFs; but without a good level of accuracy, the value of the results would be limited</li>
-						<li><strong>Initially align with a non-sector specific PCF methodology framework (PACT).</strong>As M2030’s audience operates across many different sectors, it would make senses to adopt a methodology that caters for the widest possible range of industries. Additional industry level specificities can then be further developed.</li>
+						<li>User experience design</li>
+						<li>User interface design</li>
+						<li>User research</li>
+						<li>Competitor research</li>
+						<li>Prototyping</li>
+						<li>Usability testing</li>
+					</ul>
+				</div>
+
+				<div class="results-summary col-sm-auto">
+					<strong>Results summary</strong> (As of Feb 2025)
+					<ul>
+						<li>MVP sucessfully launched in Q4 2024</li>
+						<li>Piloted by 14 major corporations</li>
+						<li>Hundred of PCF results calculated</li>
+						<li>Positive ratings averaging 4.5 of 5 from users</li>
+						<li>Numerous proactive enquires from manufacturers to adopt the tool.</li>
 					</ul>
 				</div>
 			</div>
-				</div>
 		</section>
 		
-		<section id="Persona" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2">PERSONA</h2>
-				<div class="stage-content col-md-10">
-					<p>Supplier manufacturer users were identified from the research:</p>
-				</div>
-			</div>
-			<div class="row col-lg-10 mt-5">
-				<img class="col-sm-4 px-2" src="../img/project-pcfbuilder/Persona/1-SustainabilityManager.jpg">
-				<img class="col-sm-4 px-2" src="../img/project-pcfbuilder/Persona/2-TechnicalManager.jpg">
-				<img class="col-sm-4 px-2" src="../img/project-pcfbuilder/Persona/3-CustomerManager.png">
-			</div>
-			<div class="row col-lg-8 col-md-10"></div>
-		</section>
-		
-		<section id="Draft-user-journey" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2 ">DRAFT USER JOURNEY</h2>
-				<div class="stage-content col-md-10">
-					<p>An initial user journey was then mapped out, marking out the distinct categories of data that a user would need to input to complete the calculation. Starting from  defining a product through to the final confirmation to calculate the a PCF.</p>
-					<img class="col-lg-10" src="../img/project-pcfbuilder/UserJourney/Draft.png" alt='image'>
-				</div>
-			</div>			
-		</section>
-		
-		<section id="Ideation" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2">IDEATE & PROTOTYPE</h2>
-				<div class="stage-content col-md-10">
-					<p>From there starts the design process, to ideate on:</p>
-					<ol>
-						<li>
-							<p><strong>How to make the large number of inputs required manageable.</strong></p>
-							<ul>
-								<li><p>Would splitting the process into blocks would help compartmentalise each task and help user understanding?</p>
-									<img class="col-12 border-1 mb-4" src="../img/project-pcfbuilder/IdeationPrototype/Idea1-Splitworkflow.png">
-								</li>
-								<li><p>Or if a ‘simple one-page builder’ would help streamline the workflow?</p>
-									<img class="col-12 border-1" src="../img/project-pcfbuilder/IdeationPrototype/Idea2-singlepagebuilder.png">
-								</li>
-							</ul>
-						</li>
-						<li class="mt-4">
-							<p><strong>Then working through each input category with sustainability experts, to design processes that are as ‘simple yet accurate’ as possible.</strong></p>
-							<img class="col-12 border-1 mb-5" src="../img/project-pcfbuilder/IdeationPrototype/Idea3-Services.png">
-							<p>With these considerations in mind, an initial prototype was created for......</p>
-						</li>
-					</ol>
-
-				</div>
-			</div>
-		</section>
-		
-		<section id="User-testing" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2">USER TESTING</h2>
-				<div class="stage-content col-md-10">
-					<p>Based on internal feedback the initial prototype assumes that a modular design would allow the process to be better explained in a step by step manner.</p>
-					<img class="col-12 mt-4" src="../img/project-pcfbuilder/UserTesting/CombinedImage.png">
-					<p class="mt-4">This prototype was then put in front of users to verify that assumption and test for general usability.</p>
-					<div class="card card-header mt-5">
-						<img class="col-12 rounded-1 mb-4" src="../img/project-pcfbuilder/UserTesting/UserTesting5.png">
-						<h3><i class="fa-regular fa-comments"></i> Some key feedback</h3>
-						<ul class="mb-0">
-							<li>Several key concepts need better explanations. (e.g. UNCPC code, Declared units)</li>
-							<li>The builder steps could better align with manufacture value chain step.</li>
-							<li><strong>Positively, the design did feel simple, and relatively easy to use.</strong></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<section id="Refinement" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2">REFINE</h2>
-				<div class="stage-content col-md-10">
-					<p>Various changes and improvements were made based on the user testing feedback. For example:</p>
-					<ol>
-						<li class="mt-5">
-							<p><strong>Update the builder user journey to better fit manufacturing value chain steps.</strong> Also adding data sourcing information:</p>
-							<div class="row">
-								<img class="col-sm-5" src="../img/project-pcfbuilder/RefinedDesign/1%20valuechainAnalysis.png">
-								<img class="col-sm-7 pl-5" src="../img/project-pcfbuilder/RefinedDesign/2%20FinalJourney.png">
-							</div>
-						</li>
-						<li class="mt-5">
-							<p><strong>Better explain some technical terms / requirements of the PCF builder:</strong></p>
-							<figure class="figure">
-								<img src="../img/project-pcfbuilder/RefinedDesign/3%20BetterExplain.png" class="figure-img img-fluid rounded" style="border:1px solid #eaeaea;">
-								<figcaption class="figure-caption">Clarify the analysis scope of the PCF builder.</figcaption>
-							</figure>
-							<figure class="figure">
-								<img src="../img/project-pcfbuilder/RefinedDesign/4%20BetterExplain2.png" class="figure-img img-fluid rounded" style="border:1px solid #eaeaea;">
-								<figcaption class="figure-caption">Clarify the difference of similar terms.</figcaption>
-							</figure>				
-						</li>
-					</ol>
-				</div>
-			</div>
-		</section>
-
-		<section id="MVP-design" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2">MVP DESIGN</h2>
-				<div class="stage-content col-md-10">
-					<p>Incorporating the changes based on user feedback, an MVP versions of the PCF builder was development and launched as a pilot program.</p>
-				</div>
-			</div>
-
-			<div class="row col-lg-8 col-md-10">
-				<img class="col-sm-12" src="../img/project-pcfbuilder/MVP/MVPCombined.png">
-				<div class="col-md-2"></div>
-				<div class="col-md-10">
-					<div id="Result" class="card card-header border-1">
-						<h3><i class="fa-regular fa-lightbulb"></i> Pilot results</h3>
-						<p>Leverage on the PCF MVP release, M2030 is able to engage with many multi-national corporations to run pilot programs with their suppliers to build and exchange PCFs, with the potential for further adoption in the future.</p>
-						<h4>As of Feb 2025:</h4>
+		<section id="discovery" class="target project-stage row">
+			<label class="Process-label">The process</label>
+			<h2 class="stage-title">Discovery</h2>
+			<div class="stage-content col-xl-8">
+				<p>As PCF is a very specialised subject, the first step I took was to perform a variety of research to really understand how M2030 can make a difference.</p>
+				<h3>Research activities</h3>
+				<ul>
+					<li>Survey and interviews with target users. <a href="#ModalLearnFromUsers" data-bs-toggle="modal">(Details)</a></li>
+					<li>Consulting with sustainability expert to understand technical PCF calculation requirements. <a href="#ModalLearnFromExperts" data-bs-toggle="modal">(Details)</a></li>
+					<li>Exploring current tools to understand how M2030 could make it better. <a href="#ModalLearnFromCompetitors" data-bs-toggle="modal">(Details)</a></li>
+				</ul>
+				<h3>Key learnings</h3>
+				<ol>
+					<li>78% of potential users have ‘zero’ to ‘basic’ level of PCFs understanding.</li>
+					<li>There are many technical standards for PCF calculations. They are often at early stage of development and the requirements evolved over time.</li>
+					<li>Existing tools often work at 2 extremes in the trade off between data quality vs. simplicity of calculation:
 						<ul>
-							<li><strong>14 multi-national corporations<span class=ast>*</span> are discussing / running pilot programs. </strong><br>
-							<span class="figure-caption">(<span class=ast>*</span> with the likes of Unilever, General Motor and Haleon ...etc)</span></li>
-							<li><strong>156 PCF calculations have been carried out, with 123 completed PCFs.</strong></li>
-							<li><strong>Feedback from manufacturing suppliers has been positive.</strong><br>
-								With an average experience rating of 4.5 out of 5, and in general expressed that the pilots have been a great experience.</li>
-							<li><strong>Suppliers raised interest in accessing the tool for their own usage.</strong><br>
-								On the back of the corporate driven pilots, a number of participating supplier have enquired on the possibility to maintain access of the PCF builder for their own use, and potentially for their own supply-chain program.</li>
+							<li>Highly automated AI based estimation, with results that are generalised.</li>
+							<li>Highly manual calculations with high effort, with results that are product specific.</li>
 						</ul>
-						<h4>Continual learning / Future development</h4>
-						<p>Beyond the MVP design, there are clear areas of improvements for the PCF builder, based on technical requirements for full alignment with PCF frameworks.</p>
-						<p class="mb-0">The pilot program also allowed us to continuously gather feedback and feature requests from active users (e.g. various clarifications, more flexible unit support, additional emission factor data bases ...etc), and improve the feature inline with our users as their understanding of PCFs also matures.</p>
-					</div>
-				</div>
+					</li>
+		
+				</ol>
+
+			</div>
+		</section>
+
+		<section id="design" class="target project-stage row">
+			<h2 class="stage-title">Design</h2>
+			<div class="stage-content col-xl-8">
+				<h3>Mapping out the user flow</h3>
+				<p>Based on the result of the research I drafted a user flow, with a focus on creating a modular process that would allow users without specialist PCFs knowledge to perform the calculation in a step by step manner.</p>
+				<figure class="figure">
+					<img src="/img/project-pcfbuilder/Design/Userflow-draft.jpg" class="figure-img img-fluid">
+					<figcaption class="figure-caption">High-level user flow to complete a PCF calculation.</figcaption>
+				</figure>
+
+				<h3>Explore design options</h3>
+				<p>From there we moved to the prototyping process, exploring different options for the overall feature architecture, and the design of each individual calculation step:</p>
+
+				<p><strong>1. Considering how to make the large number of required data input manageable.</strong> Would <strong>a)</strong> splitting the process into independent blocks help compartmentalise each task and help user understanding? Or <strong>b)</strong> A ‘simple one-page builder’ would help streamline the workflow?</p>
+				<figure class="figure">
+					<img src="/img/project-pcfbuilder/Design/Architecture-options.jpg" class="figure-img img-fluid">
+					<figcaption class="figure-caption">Sample explorations of feature architecture options.</figcaption>
+				</figure>
+
+				<p><strong>2. Worked with sustainability experts to design each step of the calculation.</strong> With a conscious effort to <strong>strike a balance between data quality vs. simplicity of use,</strong> by automating the most laborious tasks (eg. sourcing reliable emission factors), without compromising the accuracy of the end results.</p>
+				<figure class="figure">
+					<img src="/img/project-pcfbuilder/Design/Design-options.jpg" class="figure-img img-fluid">
+					<figcaption class="figure-caption">Example of design options for <i>Materials</i> and <i>Services</i>.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+
+		<section id="test&Refine" class="target project-stage row">
+			<h2 class="stage-title">Test & refine</h2>
+			<div class="stage-content col-xl-8">
+				<h3>User testing</h3>
+				<p>Once we had initial designs for the key pages, they were put in front of a range of users for feedback and help me to iterate the design through multiple rounds of testing.</p>
+				<h4>Some key feedbacks</h4>
+				<ol>
+					<li>For low-knowledge users, the preferences is for a highly guided workflow as expected, where a <strong>singular entry point</strong> with a step by step calculator is.</li>
+					<li>Several key concepts needed better explanations. (e.g. UNCPC code, Declared units)</li>
+					<li>For more knowledgeable users, the order of calculation could be adjusted to better <strong>align with the steps in a manufacture value chain.</strong> <a href="">(Test results snippet)</a></li>
+				</ol>
+
+				<h3>Design refinement</h3>
+				<p>Based on the feedback, we fine-tuned the feature’s architecture, and refined the design to better explain concepts that user found difficult to understand.</p>
+				<figure class="figure">
+					<img src="/img/project-pcfbuilder/Design/Refined-flow.png" class="figure-img img-fluid">
+					<figcaption class="figure-caption">Refined high-level user flow.</figcaption>
+				</figure>
+				<figure class="figure">
+					<img src="/img/project-pcfbuilder/Design/Refinment-example.png" class="figure-img img-fluid">
+					<figcaption class="figure-caption">Example refinement of UI, explaining 'Declared unit'.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		
+		<section id="MVP" class="target project-stage row">
+			<h2 class="stage-title">MVP design</h2>
+							<figure class="figure">
+					<img src="/img/project-pcfbuilder/Design/MVP-design.png" class="figure-img img-fluid">
+				</figure>
+			<div class="stage-content col-xl-8">
+				<p>The MVP was developed and launched in Q4 2024. With this new capability, M2030 was able to engage with many international corporations to run pilot programs with their supply-chain to build PCFs, and take a real practical step to understand and report carbon emissions at a product level.</p>
+
+				<h3 style="color: var(--project-color-tertiary);">MVP achievements so far (Feb 2025)</h3>
+				<ul>
+					<li>14 multi-national corporations<span class="asterisk">*</span> are discussing / running pilot programs. (<span class="asterisk">*</span> such as Unilever, General Motors and Haleon)</li>
+					<li>200+ completed PCFs calculations have been carried out.</li>
+					<li>Positive feedbacks from pilot users, that <i>'it has been a great experience.'</i> With an average experience rating of 4.5 out of 5.</li>
+					<li>Numerous unsolicited enquiries received from manufacturers to adopt the PCF tools for their own benefits.</li>
+				</ul>
 			</div>
 		</section>
 		
-		<!--MODALS-->
-		<!--MODAL: Learn from experts-->
-		<div class="modal fade" id="ModalLearnFromExperts" tabindex="-1" aria-labelledby="ModalLearnFromExperts" aria-hidden="true">
-		  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="ModalLearnFromExpertsLabel">Learn from the experts</h3>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>As PCFs is a complicated sustainability subject, we worked with sustainability experts to gather some basic understanding of the challenge and requirements in PCF before jumping into the design:</p>
-					<div class="card card-header">
-						<h4>Some key learnings:</h4>
-						<ul class="mb-0">
-							<li><strong>Product Carbon footprint (PCF)</strong> is an environmental impact accounting method that works alongside more established methods such as Lifecycle assessment (LCA) and corporate/facility-level accounting.</li>
-							<li><strong>Benefit of PCFs</strong> is that it is a middle ground between the 2 aforementioned methods.
-								<ul>
-									<li>It allows organizations to calculate the emission intensity of individual products.</li>
-									<li>It require much less data compared to LCAs. (How every this still means substantial effort are needed.)</li>
-								</ul>	
-							</li>
-							<li><strong>There are many different standards</strong> for how PCFs should be calculated. Some caters more towards specific industries, for example: Catena-X (automotive) and TFS (Chemical), while others are more general (PACT)</li>
-						</ul>
-					</div>
-					<div class="row mt-4">
-						<div class="col-md-8">
-							<h4>How are they calculated?</h4>
-							<p>We also gained a basic technical understanding of how PCFs are calculated. As with other environmental accounting methods, PCF calculations are fundamentally based on:</p>
-							<ol>
-								<li>The amount of inputs that goes into the product manufacturing process, including:
-									<ol class="a">
-										<li>Materials</li>
-										<li>Packaging</li>
-										<li>Transportation</li>
-										<li>Energy and water use</li>
-										<li>Wastes produced</li>
-										<li>Process emissions</li>
-										<li>Refrigerants and leakages</li>
-										<li>Services employed</li>
-									</ol>
-								</li>
-								<li>Emission factor for each of the input type.<br>(The amount of greenhouse gases released per unit of input)</li>
-							</ol>
-						</div>
-						<figure class="figure col-md-4">
-							<img src="../img/project-pcfbuilder/Research/PCFCalculationRequirements.png" class="figure-img img-fluid rounded" style="border:1px solid #eaeaea;">
-							<figcaption class="figure-caption">Data type requirement breakdown for PCF calculations.</figcaption>
-						</figure>
-					</div>
-				</div>
+		<section id="next-step" class="target project-stage row">
+			<h2 class="stage-title">Continual learning / next steps</h2>
+			<div class="stage-content col-xl-8">
+				<p>There are many directions in which further developments Where organizations can <strong>easily exchange their PCF results</strong> to make downstream calculations easier; <strong>Generate reports</strong> that satisfy legislative needs; and leverage <strong>PCF analytics to form product specific carbon reduction strategy.</strong></p>
+				<p>On the technical front, as the calculation standards mature it will become increasingly important to <strong>maintain alignment with general standards</strong> and provide options for <strong>sector specific standards.</strong></p>
+				<p>In addition the pilot program allowed us to monitor real usage and quickly <strong>gather customers feedback for usability improvements.</strong> All in all, the PCF calculator was an exciting first step for a new set of tools in the manufacturing sector to make real, practical environmental changes.</p>
 			</div>
-		  </div>
-		</div><!--MODAL: Learn from experts: END-->
-		
-		<!--MODAL: Learn from competitors-->
-		<div class="modal fade" id="ModalLearnFromCompetitors" tabindex="-1" aria-labelledby="ModalLearnFromCompetitors" aria-hidden="true">
-		  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="ModalLearnFromCompetitorsLabel">Learn from the competitors</h3>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</section>
+
+		<!-- section template
+
+		<section id="Template" class="project-stage row">
+			<h2 class="stage-title">Template</h2>
+			<div class="stage-content col-xl-8">
+
+			</div>
+		</section>
+
+		 -->
+	</div>
+
+
+
+	<!--***********************************************************************-->
+	<!--MODALS-->
+	<!--***********************************************************************-->
+
+	<!--MODAL: Learn from experts-->
+	<div class="modal fade" id="ModalLearnFromExperts" tabindex="-1" aria-labelledby="ModalLearnFromExperts" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="ModalLearnFromExpertsLabel">Learn from the experts</h3>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>As PCFs is a complicated sustainability subject, we worked with sustainability experts to gather some basic understanding of the challenge and requirements in PCF before jumping into the design:</p>
+				<div class="card card-header">
+					<h4>Some key learnings:</h4>
+					<ul class="mb-0">
+						<li><strong>Product Carbon footprint (PCF)</strong> is an environmental impact accounting method that works alongside more established methods such as Lifecycle assessment (LCA) and corporate/facility-level accounting.</li>
+						<li><strong>Benefit of PCFs</strong> is that it is a middle ground between the 2 aforementioned methods.
+							<ul>
+								<li>It allows organizations to calculate the emission intensity of individual products.</li>
+								<li>It require much less data compared to LCAs. (How every this still means substantial effort are needed.)</li>
+							</ul>	
+						</li>
+						<li><strong>There are many different standards</strong> for how PCFs should be calculated. Some caters more towards specific industries, for example: Catena-X (automotive) and TFS (Chemical), while others are more general (PACT)</li>
+					</ul>
 				</div>
-				<div class="modal-body">
-					<p>Sustainability is a very competitive space, where many innovators are working to replace established manual / off-line tools. So it was essential to understand these competing tools to identify what additional value we could offer.</p>
-					<div class="card card-header col-md-12">
-						<img src="../img/project-pcfbuilder/Research/Competitors/CompetitorsCombined.png">
-						<p class="mt-4">While researching these tools, it became apparent that each of them works very differently to try to simply the complicated PCF calculation process.</p>
-						<h4>Key variations:</h4>
-						<ol class="mb-0">
-							<li>
-								<strong>Level of automation:</strong>
+				<div class="row mt-4">
+					<div class="col-md-8">
+						<h4>How are they calculated?</h4>
+						<p>We also gained a basic technical understanding of how PCFs are calculated. As with other environmental accounting methods, PCF calculations are fundamentally based on:</p>
+						<ol>
+							<li>The amount of inputs that goes into the product manufacturing process, including:
 								<ol class="a">
-									<li><u>Aided emission factors (EFs) sourcing:</u> where tools allow users to choose from a pre-loaded database.</li>
-									<li><u>Semi automated EFs sourcing:</u> where tools attempt to automatically match user defined material with emission factors.</li>
+									<li>Materials</li>
+									<li>Packaging</li>
+									<li>Transportation</li>
+									<li>Energy and water use</li>
+									<li>Wastes produced</li>
+									<li>Process emissions</li>
+									<li>Refrigerants and leakages</li>
+									<li>Services employed</li>
 								</ol>
 							</li>
-							<li>
-								<strong>Anticipated level of knowledge in users:</strong>
-								<ol class="a">
-									<li><u>High:</u>where tools provide highly editable but minimally guided product-object builder.</li>
-									<li><u>Low(er):</u>where step-based UI guide user through each data fields.</li>
-								</ol>
-							</li>
-							<li>
-								<strong>Quality vs quantity of calculations:</strong><br>
-								An effect of differing level of automations means that more PCFs could be calculated by highly automated platforms. However there is a trade of where each level of automation relies on additional value assumptions, and therefore can reduce the level of accuracy of the results.
-							</li>
+							<li>Emission factor for each of the input type.<br>(The amount of greenhouse gases released per unit of input)</li>
 						</ol>
 					</div>
+					<figure class="figure col-md-4">
+						<img src="../img/project-pcfbuilder/Research/PCFCalculationRequirements.png" class="figure-img img-fluid rounded" style="border:1px solid #eaeaea;">
+						<figcaption class="figure-caption">Data type requirement breakdown for PCF calculations.</figcaption>
+					</figure>
 				</div>
 			</div>
-		  </div>
-		</div><!--MODAL: Learn from competitors: END-->
-		
-		<!--MODAL: Learn from users-->
-		<div class="modal fade" id="ModalLearnFromUsers" tabindex="-1" aria-labelledby="ModalLearnFromUsers" aria-hidden="true">
-		  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="ModalLearnFromUsersLabel">Learn from the users</h3>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>The users on M2030 are split by 2 major segments:</p>
-					<ol>
+		</div>
+		</div>
+	</div><!--MODAL: Learn from experts: END-->
+	
+	<!--MODAL: Learn from competitors-->
+	<div class="modal fade" id="ModalLearnFromCompetitors" tabindex="-1" aria-labelledby="ModalLearnFromCompetitors" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="ModalLearnFromCompetitorsLabel">Learn from the competitors</h3>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>Sustainability is a very competitive space, where many innovators are working to replace established manual / off-line tools. So it was essential to understand these competing tools to identify what additional value we could offer.</p>
+				<div class="card card-header col-md-12">
+					<img src="../img/project-pcfbuilder/Research/Competitors/CompetitorsCombined.png">
+					<p class="mt-4">While researching these tools, it became apparent that each of them works very differently to try to simply the complicated PCF calculation process.</p>
+					<h4>Key variations:</h4>
+					<ol class="mb-0">
 						<li>
-							<strong>Corporate buyers concerned with improving their supply chain.</strong> In collaboration with our sales, and sustainability consultations functions, many discussions were carried out with buyers.
-							<div class="card card-header mt-4">
-								<h4>Key learning</h4>
-								<ol class="a">
-									<li><strong>Most buyers are at early stage of PCFs journey, </strong>and appreciate it would be the same for most suppliers.</li>
-									<li><strong>Initially they want to have a limited, controlled rollouts </strong>for selected suppliers and products. To avoid overwhelming suppliers, and to overtime better understand the benefit of PCFs for themselves.</li>
-									<li><strong>Data accuracy is important </strong>to inform effective business decisions.</li>
-								</ol>
-							</div>
+							<strong>Level of automation:</strong>
+							<ol class="a">
+								<li><u>Aided emission factors (EFs) sourcing:</u> where tools allow users to choose from a pre-loaded database.</li>
+								<li><u>Semi automated EFs sourcing:</u> where tools attempt to automatically match user defined material with emission factors.</li>
+							</ol>
 						</li>
-						<li class="mt-4">
-							<strong>Manufacturing suppliers providing their products to buyers. </strong>To learn more about supplier’s experience and expectation, an initial survey was carried out.
-							<div class="card card-header mt-4">
-								<img src="../img/project-pcfbuilder/Research/Survey/SurveyCombined.png">
-								<h4 class="mt-4">Key learning</h4>
-								<ol class="a">
-									<li>78% of respondents have zero to basic understanding of PCFs only.</li>
-									<li>86% are willing to share high level PCF results with buyers, and even other suppliers.</li>
-									<li>Only 4% have already calculated PCFs for most/all their products.</li>
-									<li>The 2 major reason for not having these PCFs are:
-										<ol class="i">
-											<li>There were no previous request from customers.</li>
-											<li>Insufficient internal resources.</li>
-										</ol>
-									</li>
-								</ol>
-							</div>
+						<li>
+							<strong>Anticipated level of knowledge in users:</strong>
+							<ol class="a">
+								<li><u>High:</u>where tools provide highly editable but minimally guided product-object builder.</li>
+								<li><u>Low(er):</u>where step-based UI guide user through each data fields.</li>
+							</ol>
+						</li>
+						<li>
+							<strong>Quality vs quantity of calculations:</strong><br>
+							An effect of differing level of automations means that more PCFs could be calculated by highly automated platforms. However there is a trade of where each level of automation relies on additional value assumptions, and therefore can reduce the level of accuracy of the results.
 						</li>
 					</ol>
 				</div>
 			</div>
-		  </div>
-		</div><!--MODAL: Learn from users: END-->		
-		
-		<!--MODALS: END-->
+		</div>
+		</div>
+	</div><!--MODAL: Learn from competitors: END-->
+	
+	<!--MODAL: Learn from users-->
+	<div class="modal fade" id="ModalLearnFromUsers" tabindex="-1" aria-labelledby="ModalLearnFromUsers" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="ModalLearnFromUsersLabel">Learn from the users</h3>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>The users on M2030 are split by 2 major segments:</p>
+				<ol>
+					<li>
+						<strong>Corporate buyers concerned with improving their supply chain.</strong> In collaboration with our sales, and sustainability consultations functions, many discussions were carried out with buyers.
+						<div class="card card-header mt-4">
+							<h4>Key learning</h4>
+							<ol class="a">
+								<li><strong>Most buyers are at early stage of PCFs journey, </strong>and appreciate it would be the same for most suppliers.</li>
+								<li><strong>Initially they want to have a limited, controlled rollouts </strong>for selected suppliers and products. To avoid overwhelming suppliers, and to overtime better understand the benefit of PCFs for themselves.</li>
+								<li><strong>Data accuracy is important </strong>to inform effective business decisions.</li>
+							</ol>
+						</div>
+					</li>
+					<li class="mt-4">
+						<strong>Manufacturing suppliers providing their products to buyers. </strong>To learn more about supplier’s experience and expectation, an initial survey was carried out.
+						<div class="card card-header mt-4">
+							<img src="../img/project-pcfbuilder/Research/Survey/SurveyCombined.png">
+							<h4 class="mt-4">Key learning</h4>
+							<ol class="a">
+								<li>78% of respondents have zero to basic understanding of PCFs only.</li>
+								<li>86% are willing to share high level PCF results with buyers, and even other suppliers.</li>
+								<li>Only 4% have already calculated PCFs for most/all their products.</li>
+								<li>The 2 major reason for not having these PCFs are:
+									<ol class="i">
+										<li>There were no previous request from customers.</li>
+										<li>Insufficient internal resources.</li>
+									</ol>
+								</li>
+							</ol>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</div>
+		</div>
+	</div><!--MODAL: Learn from users: END-->		
+	
+	<!--MODALS: END-->
 
-	</div><!--Project content wrapper: END-->
+	
 	
 	<!--Load footer-->
 	<div id="footer">
