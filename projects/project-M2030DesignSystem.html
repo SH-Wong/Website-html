@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>siuhangwong.com</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="/js/project-page.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f9c061934e.js" crossorigin="anonymous"></script>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/global.css">
+	<link rel="stylesheet" href="../css/nav.css">
+	<link rel="stylesheet" href="../css/project-page-v2.css">
+	<!-- Page level styles: -->
+		<style>
+			:root{
+				--project-color-primary:#0B3646;
+				--project-color-secondary:#00E3D4;
+				--project-color-tertiary:#009d97;
+			}
+		</style>
+</head>
+
+<body id="project-page" >
+	<!--Load nav bar-->
+	<div id="navbar">
+		<script>
+			$.get("../nav.html", function(data){
+				$("#navbar").replaceWith(data);
+			})
+		</script>
+	</div>
+
+<div class="project-page-wrapper pt-5 row">
+
+	<!--spacer column / sidebar -->
+	<div id="spacer-column" class="col-md-2">
+		<div class="sidebar">
+			<a href="/index.html" class="btn btn-secondary btn"><i class="fa-solid fa-angle-left"></i> Back</a></br>
+			<a class="active" href="#project-intro">Overview</a>
+			<a href="#initial-considerations">Initial considerations</a>
+			<a href="#the-foundations">Foundations</a>
+			<a href="#base-components">Base components</a>
+			<a href="#feature-components">Feature components</a>
+			<a href="#results">Results</a>
+			<hr style="max-width:170px;">
+			<a href="https://www.figma.com/proto/IMWdRLsOTEYaZgow9iSgkM/M2030-design-system-snippet?page-id=0%3A1&node-id=4-2&viewport=200%2C274%2C0.32&t=XuIHGdS6LSKLEqhu-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4%3A2&show-proto-sidebar=1" target="_blank">Figma demo <i class="fa fa-solid fa-arrow-up-right-from-square"></i></a>
+			<a href="https://chwj0d.axshare.com/?g=1&id=xmmy79&p=about" target="_blank">Axure demo <i class="fa fa-solid fa-arrow-up-right-from-square"></i></a>
+		</div>
+	</div> <!--spacer column end-->
+
+	<!--Project content -->
+	<div id="project-content-wrapper" class="col-md-8">
+
+		<section id="project-intro" class="target row">
+			<a class="company" href="https://manufacture2030.com/" target="_blank">Manufacture 2030 <i class="fa fa-solid fa-arrow-up-right-from-square"></i></a>
+			
+			<h1 class="mt-3">M2030 Design System</h1>
+
+			<p class="mt-4 col-xxl-8">Manufacture 2030 (M2030) is B2B scale up working in the sustainability space. As the company matured, it went through many changes in its brand, and product offerings. This meant a lot of quick adaptations for the underlying platform design, in a a race to evolve alongside the business.</p>
+			
+			<p class="mt-4 col-xxl-8">For a time this was working. The product was relatively simple; the team was small; and it was easy for everyone to have a shared understanding of the design intention. But as M2030 grew its core features and expanded it teams, it became increasingly difficult to align that understanding, and inevitably we began to see more inconsistencies in the platform.</p>
+			
+			<img id="project-hero" class="image col-12 mt-4" src="../img/project-M2030DesignSystem/OverviewIssues.png" alt="Image" aria-hidden>
+			
+
+						
+			<div id="summary" class="row pt-5">
+				<div class="col-xxl-8">
+					While the initial differences were small, it presented a problem as:
+					<ul>
+						<li>Stakeholders became uncertain of the ‘correct’ design.</li>
+						<li>For users, it appears as a ‘crack’ in the system, potentially eroding trust.</li>
+						<li>For designers, well considered designs are sometimes wasted, as the same components are created over and over again.</li>
+					</ul>
+				</div>
+				<div>
+					So to tackle this, we set out to create a design system that would:
+					<ul>
+						<li>Allow product design to adapt quickly to the latest branding / experiments.</li>
+						<li>Align design understanding between core stakeholder.</li>
+						<li>Ensure consistent use of components across features and teams.</li>
+					</ul>
+				</div>
+
+				<div class="results-summary col-xxl-5">
+					<strong>Results summary</strong>
+					<ul>
+						<li>Design system aligned with latest brand identity</li>
+						<li>Token based system allow for high adaptability</li>
+						<li>Increase alignment and consistency of design intention for design and engineering team members.</li>
+						<li>Secondary Axure based systems created.</li>
+					</ul>
+				</div>
+
+				<div class="col-xxl-3" style="margin-right:16px">
+					<strong>My role</strong>
+					<ul>
+						<li>User interface design</li>
+						<li>Design system</li>
+					</ul>
+					
+					<strong>Demo links: </strong>
+					<ul>
+						<li><a href="https://www.figma.com/proto/IMWdRLsOTEYaZgow9iSgkM/M2030-design-system-snippet?page-id=0%3A1&node-id=4-2&viewport=200%2C274%2C0.32&t=XuIHGdS6LSKLEqhu-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4%3A2&show-proto-sidebar=1" target="_blank">Figma snippets <i class="fa fa-solid fa-arrow-up-right-from-square"></i></a></li>
+						<li><a href="https://chwj0d.axshare.com/?g=1&id=xmmy79&p=about" target="_blank">Axure snippets <i class="fa fa-solid fa-arrow-up-right-from-square"></i></a></li>
+					</ul>
+				</div>
+
+
+			</div>
+		</section>
+
+		<section id="initial-considerations" class="target project-stage row">
+			<label class="Process-label">The process</label>
+			<h2 class="stage-title">Initial considerations</h2>
+			<div class="stage-content col-xxl-8">
+				<h3>Brand alignment</h3>
+				<p>Having been through multiple platform rebrands, elements of the UI design unfortunately lagged behind, and subtle changes are needed to catch up with the latest branding and provide a unified experience across the business.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/Initial-logos.png" class="figure-img img-fluid">
+				</figure>
+
+				<h3>Adaptability</h3>
+				While growth brought more stability to M2030’s brand and product, an adaptable system remains essential since:
+				<ul>
+					<li>Sustainability is still a developing sector where continual adaptation are to be expected as new technology and legislations emerges.</li>
+					<li>Experimentation is in the DNA of the company to explore new ways to help manufacturers reduce their environmental impact.</li>
+				</ul>
+				So to ensure this flexibility, we employed two tools.
+				<ol>
+					<li><strong>A clear hierarchical system</strong> that consist of:
+						<ul>
+							<li><i>The foundations</i> - defining the smallest design building block.</li>
+							<li><i>Base components</i> - the most basic recognisable UI elements.</li>
+							<li><i>Feature components</i> - complex components that have specific usage context.</li>
+						</ul>
+					</li>
+					<li><strong>Using semantic tokens that clearly communicate use cases</strong> to engineers and designers. Structured in a way and can propagate changes quickly at different levels.</li>
+				</ol>
+
+				<h3>Responsiveness</h3>
+				<p>While as a B2B platform, M2030’s users are primarily desktop based <i>(Estimated to be 94% based on users screen-size data - Q4 2024).</i> It remains important to keep an eye on providing a flexible design system when looking to future developments, and maintain a well crafted front end when viewed in less used systems to maintain user’s trust.</p>
+
+				<h3>Accessibility</h3>
+				<p>Accessibility is an oft-forgotten aspect when implementing fast pace designs. A lot of thought were put into this in the original M2030 designs, and a new system should ensure that they are incorporated, and make the implementation of accessible UIs seamless for designers and engineers.</p>
+			</div>
+		</section>
+
+		<section id="the-foundations" class="target project-stage row">
+			<label class="Process-label">Structured system</label>
+			<h2 class="stage-title">The Foundations</h2>
+			<div class="stage-content col-xxl-8">
+				<p>The atomic building blocks of the M2030 design system, the foundation setup the general look and feel of the platform overall, through the definition of:</p>
+				<h3>Colour palette</h3>
+				<p>Based on the latest branding and typical validation needs of a B2B platform. The colour palette defined all the colour options available for the platform UI.</p>
+				<p><strong>Setup with accessibility in mind,</strong> in general these colours can be pair either black or white text to satisfy colour contrast requirements.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/colours.png" class="figure-img img-fluid">
+					<figcaption class="figure-caption">Snippet of colour options from the M2030 design system.</figcaption>
+				</figure>
+
+				<h3>Spacing</h3>
+				<p>Define the general spacing of elements within the platform, the spacing tokens act to establish the ‘rhythm and feels’ of the platform.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/Spacing.png" class="figure-img img-fluid">
+					<figcaption class="figure-caption">Snippet of spacing tokens.</figcaption>
+				</figure>
+
+				<h3>Typography</h3>
+				<p>Selection of readable fonts and defining well differentiated headings helps to establish clear hierarchy in the platform.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/typography.png" class="figure-img img-fluid">
+					<figcaption class="figure-caption">Snippet of typography tokens.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<section id="base-components" class="target project-stage row">
+			<h2 class="stage-title">Base components</h2>
+			<div class="stage-content col-xxl-8">
+				<p>Having established the foundation, we then worked on the base components. These are individual UI components that often mirror standard html elements. Which can then be used to build practical UIs and context specific feature components as needs arises.</p>
+				<label><strong>Some examples:</strong></label>
+				
+				<h3>Buttons</h3>
+				<p>Button component designed to maximise flexibility, covering four types of usage in different states, and supporting usage with and without icons.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/components-buttons.png" class="figure-img img-fluid">
+				</figure>
+
+				<h3>Tables</h3>
+				<p>A component of table cells, covering full structure of standard tables, and icon usage in header and body cells.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/components-tables.png" class="figure-img img-fluid">
+				</figure>
+			</div>
+		</section>
+
+		<section id="feature-components" class="target project-stage row">
+			<h2 class="stage-title">Feature components</h2>
+			<div class="stage-content col-xxl-8">
+				<p>The base components above are then used to create feature-level components. That are global / repeated features, used to answer contextual needs within M2030.</p>
+				<label><strong>For example:</strong></label>
+
+				<h3>Site navigation</h3>
+				<p>The top level global navigation. Constructed using base components like dropdowns and profile plates, with responsive styling to support mobile devices.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/feature-siteNav.png" class="figure-img img-fluid">
+				</figure>
+
+				<h3>Page header</h3>
+				<p>Designed to support a large variety of existing, and potential use cases. The page header component provide flexibility to create a simple header that only consist of the page title, or one that include many interactive elements.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/feature-pageHead.png" class="figure-img img-fluid">
+				</figure>
+				
+				<h3>Project cards</h3>
+				<p>Support usage within ‘Reduction plans’ created by users. Representing improvement project chosen by the users. The component makes use of base components like buttons, profile plates, drop down, and pill labels.</p>
+				<figure class="figure">
+					<img src="/img/project-M2030DesignSystem/feature-projectCard.png" class="figure-img img-fluid">
+				</figure>
+			</div>
+		</section>
+
+		<section id="results" class="target project-stage row">
+			<h2 class="stage-title">Results</h2>
+			<div class="stage-content col-xxl-8">
+				<h3>Initial implementation</h3>
+				<p>The structure of <strong>Foundation > Base > Feature components</strong> of the M2030 design system  means that changes can be controlled via variables at different levels.</p>
+				<p>With considered decisions, design change can either by propagated quickly across the entire platform design by updating the foundation tokens; or customised for an individual component by creating a feature component specific variable.</p>
+				<p>The initial distribution of the system have clearly helped align understanding of the designs, with less confusion highlighted by the core stakeholders, and made it easier for designers to create consistent, well crafted UIs.</p>
+
+				<h3>What's next?</h3>
+				<p>The design system still new to M2030, and as the business grows it will surely present more challenges for the system to adapt and change. This initial implementation should serve as a good starting point for further expansion, and continue to help align stakeholders understanding of design decisions going forward.</p>
+
+				<h3>More examples</h3>
+				<ul>
+					<li>
+						<a href="https://www.figma.com/proto/IMWdRLsOTEYaZgow9iSgkM/M2030-design-system-snippet?page-id=0%3A1&node-id=4-2&viewport=200%2C274%2C0.32&t=XuIHGdS6LSKLEqhu-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4%3A2&show-proto-sidebar=1" target="_blank">A snippet of the Figma based design system.<i class="fa fa-solid fa-arrow-up-right-from-square"></i></a>
+					</li>
+					<li>
+						<a href="https://chwj0d.axshare.com/?g=1&id=xmmy79&p=about" target="_blank">Link to an Axure based snippet.<i class="fa fa-solid fa-arrow-up-right-from-square"></i></a>
+					</li>
+				</ul>
+
+			</div>
+		</section>
+
+		<!-- section template
+
+		<section id="Template" class="project-stage row">
+			<h2 class="stage-title">Template</h2>
+			<div class="stage-content col-xxl-8">
+
+			</div>
+		</section>
+
+		 -->
+	</div>
+
+	
+	<!--Load footer-->
+	<div id="footer">
+		<script>
+			$.get("../footer.html", function(data){
+				$("#footer").replaceWith(data);
+			})
+		</script>
+	</div>
+
+</div>
+</body>
+    
+</html>
