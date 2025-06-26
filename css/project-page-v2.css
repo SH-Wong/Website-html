@@ -30,8 +30,16 @@
     a{
         color: var(--project-color-tertiary);
         
+        .fa{
+            color:var(--grey-3);
+            font-size: 1rem;
+            vertical-align: middle;
+            margin-left: 8px;
+            margin-bottom: 4px;
+        }
+
         &:hover{
-            color:var(--grey-5);
+            filter:brightness(0.66);
         }
     }
 
@@ -60,12 +68,19 @@
         text-overflow: ellipsis;
         overflow: hidden;
 
+        .fa{
+            font-size: 0.75rem;
+            vertical-align: middle;
+            margin-bottom: 1px;
+            color:var(--grey-3);
+        }
+
         &.active, &.active:hover{
             color: var(--project-color-tertiary);
         }
 
         &:hover{
-            color: inherit;
+            filter: brightness(0.66);
         }
     }
 
@@ -101,13 +116,6 @@
         font-weight: 600;
         color: var(--project-color-tertiary);
         margin-bottom: 32px;
-
-        .fa{
-            color:var(--grey-3);
-            font-size: 1rem;
-            vertical-align: middle;
-            margin-bottom: 4px;
-        }
 
         &:hover{
             color: var(--project-color-tertiary);
