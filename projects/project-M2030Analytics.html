@@ -9,6 +9,7 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="/js/project-page.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="../css/global.css">
 	<link rel="stylesheet" href="../css/nav.css">
-	<link rel="stylesheet" href="../css/project-page.css">
+	<link rel="stylesheet" href="../css/project-page-v2.css">
 	<!-- Page level styles: -->
 		<style>
 			:root{
@@ -25,21 +26,10 @@
 				--project-color-secondary:#00E3D4;
 				--project-color-tertiary:#009d97;
 			}
-			
-			.card#Result{
-				background-color: rgb(0, 157, 151, .03);
-				border-color: rgb(0, 157, 151, .5);
-				
-				h3, i{
-					color: var(--project-color-tertiary);
-				}
-			}
-			
-			.ast{color: var(--project-color-tertiary);}
-		</style>
+			</style>
 </head>
 
-<body id="project-page">
+<body id="project-page" >
 	<!--Load nav bar-->
 	<div id="navbar">
 		<script>
@@ -49,44 +39,69 @@
 		</script>
 	</div>
 
-	<div id="project-content-wrapper" class="container-fluid">
-		
-		<section id="project-hero-wrapper" class="row pt-5">
-			<div class="col-md-1"></div> <!--spaceer column -->
-			<div id="project-intro" class="col-lg-7 col-md-10">
-				<div id="breadcrumb">
-					<a href="/index.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angle-left"></i> Back</a>
-					<span style="color:var(--project-color-tertiary);">2018 &gt; 2025</span><span class="divider"> | </span>
-					<a href="https://manufacture2030.com/" target="_blank">Manufacture 2030 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+<div class="project-page-wrapper pt-5 row">
+
+	<!--spacer column / sidebar -->
+	<div id="spacer-column" class="col-md-2">
+		<div class="sidebar">
+			<a href="/index.html" class="btn btn-secondary btn"><i class="fa-solid fa-angle-left"></i> Back</a></br>
+			<a class="active" href="#project-intro">Overview</a>
+			<a href="#goal">Project goal</a>
+			<a href="#learning">MVP learnings</a>
+			<a href="#designs">Reworked designs</a>
+			<a href="#details">Detailed case study</a>
+		</div>
+	</div> <!--spacer column end-->
+
+	<!--Project content -->
+	<div id="project-content-wrapper" class="col-md-8">
+
+		<section id="project-intro" class="target row">
+			<a class="company" href="https://manufacture2030.com/" target="_blank">Manufacture 2030<i class="fa fa-solid fa-arrow-up-right-from-square"></i></a>
+			
+			<h1 class="mt-3">Supply chain analytics dashboard</h1>
+
+			<p class="mt-4 col-xxl-8">A promise of the Manufacture 2030 platform (M2030), is that it helps corporations to capture and analyse the environmental impact of their global supply chain; and provide actionable insights to help plan future improvements. To this end we revisited an MVP development of the M2030 analytic platform to improve usability and to design new, useful analytics.</p>
+			
+			<img id="project-hero" class="image col-12 mt-4" src="../img/project-M2030Analytics/0_Hero.png" alt="Image" aria-hidden>
+
+			<div id="summary" class="row pt-5">
+				<div class="my-role col-sm-auto" style="margin-right:40px">
+					<strong>My role</strong>
+					<ul>
+						<li>Information architecture</li>
+						<li>User interface design</li>
+						<li>User research</li>
+						<li>Prototyping</li>
+						<li>Usability testing</li>
+					</ul>
 				</div>
-				<h1 class="mt-3">Supply chain analytics dashboard</h1>
-				<div id="capacity">
-					<label>CAPACITY:</label>
-					<span class="badge rounded-pill">UX design</span>
-					<span class="badge rounded-pill">Visual design</span>
+
+				<div class="results-summary col-sm-auto">
+					<strong>Results summary</strong> (As of Feb 2025)
+					<ul>
+						<li>Improved users satisfaction</li>
+						<li>Better coverage of user needs</li>
+						<li>Better foundation for future additions</li>
+					</ul>
 				</div>
-				<p class="mt-4">A promise of the Manufacture 2030 platform (M2030), is that it helps corporations to capture and analyse the environmental impact of their global supply chain; and provide actionable insights to help plan future improvements. To this end we revisited an MVP development of the M2030 analytic platform to improve usability and to design new, useful analytics.</p>
 			</div>
-			<div id="project-hero" class="col-md-12">
-				<img class="image" src="../img/project-M2030Analytics/0_Hero.png" alt="Image" aria-hidden>
+		</section>
+		
+		<section id="goal" class="target project-stage row">
+			<h2 class="stage-title">Project goal</h2>
+			<div class="stage-content col-xl-8">
+				<p>In revisiting the M2030 analytics platform, the goal is to leverage on lessons learned from the initial MVP implementation, and make improvements to the usability of the analytics platform, as well as provide users with additional relevant insights.</p>
+
 			</div>
 		</section>
 
-		<section id="Goal" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2">GOAL</h2>
-				<div class="stage-content col-md-10">
-					<p>In revisiting the M2030 analytics platform, the goal is to leverage on lessons learned from the initial MVP implementation, and make improvements to the usability of the analytics platform, as well as provide users with additional relevant insights.</p>
-				</div>
-			</div>
-		</section>
-		
-		<section id="Lessons" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-			<h2 class="stage-title col-md-2">LESSONS FROM MVP</h2>
-			<div class="stage-content col-md-10">
-				<p>We were able to gather live feedback from the usage of the MVP platform, as well as from subsequent discussions with corporate clients. Some key lessons:</p>
-				<h3>Confirmation of the Persona that actively make use of the platform:</h3>
+		<section id="learning" class="target project-stage row">
+			<h2 class="stage-title">Learning from the MVP</h2>
+			<div class="stage-content col-xl-8">
+				<p>Over the lifetime of the MVP platform, we gathered feedback from users about their experiences. Also regular catchup with our corporate clients allowed us to learn about their needs in depth. Some key lessons:</p>
+				
+				<h3>Confirming the Personas that actively uses the platform:</h3>
 				<ul>
 					<li>Sustainability, and Environment, health and safety manager</li>
 					<li>Category manager</li>
@@ -94,7 +109,7 @@
 				</ul>
 				<h3>General issues</h3>
 				<ol>
-					<li>Some reports feels too complex and not intuitive to understand.
+					<li>Reports often feels too complex, and not intuitive to understand.
 						<ul>
 							<li>Specific analytics uses non-standard chart types.</li>
 							<li>Some analytics attempted to provide multiple insights, however making the intended value less clear</li>
@@ -113,192 +128,59 @@
 					<li>Additional supplier energy consumption analytics. Going beyond broad level CO2e analyses, and enable more detailed hotpot identification in suppliers energy resources.</li>
 				</ol>
 			</div>
-				</div>
 		</section>
-		
-		<section id="Designs" class="project-stage row justify-content-center">
-			<div class="row col-lg-8 col-md-10">
-				<h2 class="stage-title col-md-2">REVISED DESIGNS</h2>
-				<div class="stage-content col-md-10">
-					<p>Examples of designs from the reworked dashboard.</p>
-				</div>
-			</div>
-			<div class="row col-lg-8 col-md-10 mt-5">
+
+
+		<section id="designs" class="target project-stage row">
+			<h2 class="stage-title">Reworked designs</h2>
+			<div class="stage-content col-xl-12">
+				<p>Examples of designs from the reworked dashboard:</p>
 				<figure class="figure">
 					<img src="../img/project-M2030Analytics/1_CO2eOverTime.jpg" class="figure-img img-fluid rounded">
 					<figcaption class="figure-caption">Whole supply chain CO2e emissions over time.</figcaption>
 				</figure>
-			</div>
-			<div class="row col-lg-8 col-md-10 mt-5">
 				<figure class="figure">
 					<img src="../img/project-M2030Analytics/2_SuppliersOverview.jpg" class="figure-img img-fluid rounded">
 					<figcaption class="figure-caption">Supplier data submissions and improvement plans status</figcaption>
 				</figure>
-			</div>
-			<div class="row col-lg-8 col-md-10 mt-5">
 				<figure class="figure">
 					<img src="../img/project-M2030Analytics/3_ReductionPath.jpg" class="figure-img img-fluid rounded">
 					<figcaption class="figure-caption">‘Glide path’ for suppliers emissions forecast</figcaption>
 				</figure>
-			</div>
-			<div class="row col-lg-8 col-md-10 mt-5">
 				<figure class="figure">
 					<img src="../img/project-M2030Analytics/4_DataExplorer.jpg" class="figure-img img-fluid rounded">
 					<figcaption class="figure-caption">Data explorer and export.</figcaption>
 				</figure>
-			</div>
-			<div class="row col-lg-8 col-md-10 mt-5">
 				<figure class="figure">
 					<img src="../img/project-M2030Analytics/5_EnergyBreakdown.jpg" class="figure-img img-fluid rounded">
 					<figcaption class="figure-caption">Suppliers energy consumption breakdown.</figcaption>
 				</figure>
 			</div>
 		</section>
-		
-		
-		<!--MODALS-->
-		<!--MODAL: Learn from experts-->
-		<div class="modal fade" id="ModalLearnFromExperts" tabindex="-1" aria-labelledby="ModalLearnFromExperts" aria-hidden="true">
-		  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="ModalLearnFromExpertsLabel">Learn from the experts</h3>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>As PCFs is a complicated sustainability subject, we worked with sustainability experts to gather some basic understanding of the challenge and requirements in PCF before jumping into the design:</p>
-					<div class="card card-header">
-						<h4>Some key learnings:</h4>
-						<ul class="mb-0">
-							<li><strong>Product Carbon footprint (PCF)</strong> is an environmental impact accounting method that works alongside more established methods such as Lifecycle assessment (LCA) and corporate/facility-level accounting.</li>
-							<li><strong>Benefit of PCFs</strong> is that it is a middle ground between the 2 aforementioned methods.
-								<ul>
-									<li>It allows organizations to calculate the emission intensity of individual products.</li>
-									<li>It require much less data compared to LCAs. (How every this still means substantial effort are needed.)</li>
-								</ul>	
-							</li>
-							<li><strong>There are many different standards</strong> for how PCFs should be calculated. Some caters more towards specific industries, for example: Catena-X (automotive) and TFS (Chemical), while others are more general (PACT)</li>
-						</ul>
-					</div>
-					<div class="row mt-4">
-						<div class="col-md-8">
-							<h4>How are they calculated?</h4>
-							<p>We also gained a basic technical understanding of how PCFs are calculated. As with other environmental accounting methods, PCF calculations are fundamentally based on:</p>
-							<ol>
-								<li>The amount of inputs that goes into the product manufacturing process, including:
-									<ol class="a">
-										<li>Materials</li>
-										<li>Packaging</li>
-										<li>Transportation</li>
-										<li>Energy and water use</li>
-										<li>Wastes produced</li>
-										<li>Process emissions</li>
-										<li>Refrigerants and leakages</li>
-										<li>Services employed</li>
-									</ol>
-								</li>
-								<li>Emission factor for each of the input type.<br>(The amount of greenhouse gases released per unit of input)</li>
-							</ol>
-						</div>
-						<figure class="figure col-md-4">
-							<img src="../img/project-pcfbuilder/Research/PCFCalculationRequirements.png" class="figure-img img-fluid rounded" style="border:1px solid #eaeaea;">
-							<figcaption class="figure-caption">Data type requirement breakdown for PCF calculations.</figcaption>
-						</figure>
-					</div>
-				</div>
-			</div>
-		  </div>
-		</div><!--MODAL: Learn from experts: END-->
-		
-		<!--MODAL: Learn from competitors-->
-		<div class="modal fade" id="ModalLearnFromCompetitors" tabindex="-1" aria-labelledby="ModalLearnFromCompetitors" aria-hidden="true">
-		  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="ModalLearnFromCompetitorsLabel">Learn from the competitors</h3>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>Sustainability is a very competitive space, where many innovators are working to replace established manual / off-line tools. So it was essential to understand these competing tools to identify what additional value we could offer.</p>
-					<div class="card card-header col-md-12">
-						<img src="../img/project-pcfbuilder/Research/Competitors/CompetitorsCombined.png">
-						<p class="mt-4">While researching these tools, it became apparent that each of them works very differently to try to simply the complicated PCF calculation process.</p>
-						<h4>Key variations:</h4>
-						<ol class="mb-0">
-							<li>
-								<strong>Level of automation:</strong>
-								<ol class="a">
-									<li><u>Aided emission factors (EFs) sourcing:</u> where tools allow users to choose from a pre-loaded database.</li>
-									<li><u>Semi automated EFs sourcing:</u> where tools attempt to automatically match user defined material with emission factors.</li>
-								</ol>
-							</li>
-							<li>
-								<strong>Anticipated level of knowledge in users:</strong>
-								<ol class="a">
-									<li><u>High:</u>where tools provide highly editable but minimally guided product-object builder.</li>
-									<li><u>Low(er):</u>where step-based UI guide user through each data fields.</li>
-								</ol>
-							</li>
-							<li>
-								<strong>Quality vs quantity of calculations:</strong><br>
-								An effect of differing level of automations means that more PCFs could be calculated by highly automated platforms. However there is a trade of where each level of automation relies on additional value assumptions, and therefore can reduce the level of accuracy of the results.
-							</li>
-						</ol>
-					</div>
-				</div>
-			</div>
-		  </div>
-		</div><!--MODAL: Learn from competitors: END-->
-		
-		<!--MODAL: Learn from users-->
-		<div class="modal fade" id="ModalLearnFromUsers" tabindex="-1" aria-labelledby="ModalLearnFromUsers" aria-hidden="true">
-		  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-lg-down">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="ModalLearnFromUsersLabel">Learn from the users</h3>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>The users on M2030 are split by 2 major segments:</p>
-					<ol>
-						<li>
-							<strong>Corporate buyers concerned with improving their supply chain.</strong> In collaboration with our sales, and sustainability consultations functions, many discussions were carried out with buyers.
-							<div class="card card-header mt-4">
-								<h4>Key learning</h4>
-								<ol class="a">
-									<li><strong>Most buyers are at early stage of PCFs journey, </strong>and appreciate it would be the same for most suppliers.</li>
-									<li><strong>Initially they want to have a limited, controlled rollouts </strong>for selected suppliers and products. To avoid overwhelming suppliers, and to overtime better understand the benefit of PCFs for themselves.</li>
-									<li><strong>Data accuracy is important </strong>to inform effective business decisions.</li>
-								</ol>
-							</div>
-						</li>
-						<li class="mt-4">
-							<strong>Manufacturing suppliers providing their products to buyers. </strong>To learn more about supplier’s experience and expectation, an initial survey was carried out.
-							<div class="card card-header mt-4">
-								<img src="../img/project-pcfbuilder/Research/Survey/SurveyCombined.png">
-								<h4 class="mt-4">Key learning</h4>
-								<ol class="a">
-									<li>78% of respondents have zero to basic understanding of PCFs only.</li>
-									<li>86% are willing to share high level PCF results with buyers, and even other suppliers.</li>
-									<li>Only 4% have already calculated PCFs for most/all their products.</li>
-									<li>The 2 major reason for not having these PCFs are:
-										<ol class="i">
-											<li>There were no previous request from customers.</li>
-											<li>Insufficient internal resources.</li>
-										</ol>
-									</li>
-								</ol>
-							</div>
-						</li>
-					</ol>
-				</div>
-			</div>
-		  </div>
-		</div><!--MODAL: Learn from users: END-->		
-		
-		<!--MODALS: END-->
 
-	</div><!--Project content wrapper: END-->
+		<section id="details" class="target project-stage row">
+			<h2 class="stage-title">Detailed case study</h2>
+			<div class="stage-content col-xl-8">
+				<a href="https://www.figma.com/proto/D6XZiOEkHBabdraPEjm3hV/Case-studies?page-id=79%3A135&node-id=79-136&viewport=155%2C65%2C0.18&t=luahIHdQ36pEzQ1T-1&scaling=contain&content-scaling=fixed&starting-point-node-id=79%3A136" target="_blank">Link to a detailed case study of the full process. (Password required)</a>
+			</div>
+		</section>
+
+		
+
+		
+
+
+		<!-- section template
+
+		<section id="Template" class="project-stage row">
+			<h2 class="stage-title">Template</h2>
+			<div class="stage-content col-xl-8">
+
+			</div>
+		</section>
+
+		 -->
+	</div>
 	
 	<!--Load footer-->
 	<div id="footer">
