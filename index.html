@@ -21,6 +21,14 @@
 	<!-- Page level styles: -->
 </head>
 
+<div id="google-tag">
+	<script>
+		$.get("./js/google-tag.js", function(data){
+			$("#google-tag").replaceWith(data);
+		})
+	</script>
+</div>
+
 <body id="landing-page">
 	<!--Load nav bar-->
 	<div id="navbar">
