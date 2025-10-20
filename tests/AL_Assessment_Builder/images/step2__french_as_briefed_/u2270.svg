@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="960px" height="40px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="480" y1="0" x2="480" y2="40" id="LinearGradient16">
+      <stop id="Stop17" stop-color="#fcfcfc" offset="0" />
+      <stop id="Stop18" stop-color="#fcfcfc" offset="0.5" />
+      <stop id="Stop19" stop-color="#f6f6f6" offset="0.5" />
+      <stop id="Stop20" stop-color="#f6f6f6" offset="1" />
+    </linearGradient>
+    <pattern id="BGPattern" patternUnits="userSpaceOnUse" alignment="0 0" imageRepeat="None" />
+  </defs>
+  <g>
+    <path d="M 0 40  L 0 0  L 960 0  L 960 40  L 0 40  Z " fill-rule="nonzero" fill="url(#LinearGradient16)" stroke="none" class="fill" />
+    <path d="M 960 39.5  L 0 39.5  M 0 0.5  L 960 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(234, 234, 234, 1)" fill="none" class="stroke" />
+  </g>
+</svg>

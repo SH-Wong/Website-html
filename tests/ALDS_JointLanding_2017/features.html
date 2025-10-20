@@ -29,5 +29,30 @@
         <div id="footer">
             <script>$('#footer').load('mkt-footer.html');</script>
         </div>
+        <script>
+            var trianglify = function (a, b, c, d) {
+                var t = new Trianglify({
+                    cellsize: 500,
+                    bleed: 150,
+                    cellpadding: 50,
+                    noiseIntensity: 0,
+                    x_gradient: [a, b, c],
+                    y_gradient: [a, b, c],
+                    fillOpacity: 1,
+                    strokeOpacity: 1});
+                var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
+                var area = document.getElementsByClassName(d);
+                i = area.length;
+                while (i--) {
+                    area[i].setAttribute('style', 'background-image: ' + pattern.dataUrl);
+                }
+                ;
+            };
+            trianglify("#EEEEEE", "#EAEAEA", "#F5F5F5", "tri-light");
+            trianglify("#454F54", "#414B4F", "#4A555A", "tri-dark");
+            trianglify("#64CBE0", "#72D2E5", "#7FD6E8", "tri-AT");
+            trianglify("#a0c54e", "#a5cc51", "#aad154", "tri-AL");
+            trianglify("#ef5540", "#f95744", "#fb5f4d", "tri-AB");
+        </script>
     </body>	  
 </html>
