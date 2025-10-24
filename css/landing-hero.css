@@ -41,7 +41,7 @@ body{
     text-decoration: none;
         
     .hi{
-        font-size: 37.1px;
+        font-size: 38.1px;
         font-weight: 600;
         color: Gold;
         line-height: 1.5;
@@ -83,7 +83,7 @@ body{
     font-size: 16.5px;
     font-weight:600;
     line-height: 1.5;
-    width:360px;
+    width:330px;
     margin-bottom: 1rem;
     color:var(--grey-5);
 
@@ -158,6 +158,8 @@ Animated gradient reference: https://www.sliderrevolution.com/resources/css-anim
         height:120px;
         bottom:80px;
         left:20%;
+        mix-blend-mode:color-burn;
+        opacity: 0.33;
         animation: hovering 60s infinite;
         
         @media (max-width:880px) { &{
